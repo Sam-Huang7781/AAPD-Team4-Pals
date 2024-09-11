@@ -1,0 +1,32 @@
+// 自定義顏色，bootstrap的原生色票沒有動到
+
+// App Color
+$primary-light: #FEF5EE;
+$primary-dark: #383330;
+$primary-orange: #F0743E;
+$primary-green: #7DBA6E;
+
+// Doll $ Mood Color
+$mustard-300: #FDD849;
+$california-500: #FE9E09;
+$green-300: #AAD59F;
+$purple-400: #CDBCDC;
+$blue-300: #9AB2D4;
+
+
+$custom-colors: (
+  "primary-light": $primary-light,
+  "primary-dark": $primary-dark,
+  "primary-orange": $primary-orange,
+  "primary-green": $primary-green,
+
+  "mustard-300": $mustard-300,
+  "california-500": $california-500,
+  "green-300": $green-300,
+  "purple-400": $purple-400,
+  "blue-300": $blue-300,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrap/scss/bootstrap";

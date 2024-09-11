@@ -1,0 +1,20 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+
+// 處理文字大小的響應式，如fs-1、fs-lg-2，另外目前RFS有關掉
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-size":
+      map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
+

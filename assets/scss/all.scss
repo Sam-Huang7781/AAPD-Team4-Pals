@@ -1,0 +1,19 @@
+// 自訂義的檔案要放在bootstrap之前，才能蓋掉後面引入的bootstrap樣式設定
+@import "bootstrap/scss/functions";
+@import "./utils/variables";
+@import "./utils/custom-colors";
+@import "./utils/util";
+
+// 引入bootstrap
+@import "bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@import "./base/typography";
+@import "./base/base.scss";
+
+@import "./component/swiper";
+
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+
+@import "./pages/index.scss";
