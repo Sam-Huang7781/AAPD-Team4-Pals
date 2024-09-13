@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>homepage</title>
+  </head>
+  <body>
+    <!-- <%- include('./layout/header'); -%> -->
+
+    <!-- login -->
+    <section
+      class="login vh-100 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center bg-primary-light"
+      >
+        <div class="row g-0">
+          <div class="doll d-flex pt-15 pb-6">
+            <div class="col d-flex flex-column align-items-center">
+              <img
+                src="../assets/images/homepage/mood_laugh_O_132x120.png"
+                alt=""
+                class="img-fluid"
+              />
+              <img
+                src="../assets/images/homepage/shadow.png"
+                alt=""
+                class="img-fluid w-50"
+              />
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+              <img
+                src="../assets/images/homepage/mood_laugh_P_132x120.png"
+                alt=""
+                class="img-fluid"
+              />
+              <img
+                src="../assets/images/homepage/shadow.png"
+                alt=""
+                class="img-fluid w-50"
+              />
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+              <img
+                src="../assets/images/homepage/mood_laugh_Y_132x120.png"
+                alt=""
+                class="img-fluid"
+              />
+              <img
+                src="../assets/images/homepage/shadow.png"
+                alt=""
+                class="img-fluid w-50"
+              />
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+              <img
+                src="../assets/images/homepage/mood_laugh_G_132x120.png"
+                alt=""
+                class="img-fluid"
+              />
+              <img
+                src="../assets/images/homepage/shadow.png"
+                alt=""
+                class="img-fluid w-50"
+              />
+            </div>
+            <div class="col d-flex flex-column align-items-center">
+              <img
+                src="../assets/images/homepage/mood_laugh_B_132x120.png"
+                alt=""
+                class="img-fluid"
+              />
+              <img
+                src="../assets/images/homepage/shadow.png"
+                alt=""
+                class="img-fluid w-50"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="welcome-text text-center">
+          <h2 class="mb-2 fw-bold fs-7">Welcome</h2>
+          <h3 class="fw-bold fs-7">登入</h3>
+        </div>
+        <form
+          action=""
+          class="rounded-3 p-5 p-lg-9"
+          novalidate=""
+        >
+          <div class="general-way mb-5 mb-md-9">
+            <div class="mb-4">
+              <!-- <label for="account" class="form-label fw-bold">會員帳號</label> -->
+              <input
+                type="text"
+                class="form-control rounded-4 border-primary-dark border-2"
+                id="account"
+                placeholder="請輸入會員帳號"
+                required=""
+              />
+            </div>
+            <div class="d-flex align-items-center position-relative mb-4">
+              <!-- <label for="password" class="form-label fw-bold">密碼</label> -->
+              <input
+                type="password"
+                class="form-control rounded-4 border-primary-dark border-2 fz-14 py-4"
+                id="password"
+                placeholder="請輸入密碼"
+                required=""
+              />
+              <i class="bi bi-eye position-absolute end-0 me-5 fs-4"></i>
+            </div>
+            <button type="button" class="btn link-rock-blue fs-3 fw-bold p-0">
+              忘記密碼？
+            </button>
+            <button type="submit" class="btn btn-primary-dark rounded-4 w-100" style="box-shadow: 0px 2px 0px 0px #D9C5A5;">登入</button>
+          </div>
+          <div class="other-way mb-5 mb-md-9">
+            <div class="text-center text-gray-300 mb-5 mb-md-9">
+              <span
+                class="d-block px-2 other-way-decoration-line position-relative"
+                >使用第三方帳號登入</span
+              >
+            </div>
+            <a href="#" class="btn btn-gray-100 fs-6 py-2 px-3 w-100 mb-1">
+              <div class="d-flex justify-content-center align-items-center">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGySURBVHgBtZM/T8JAGMafa4kQHSSMTCXRxMRBMK5GOjqYlNFJ/QAmTqyIg3HzIwCLjnQwrpToZqJFXRyMXYxOSmQAIuV8j9YGShv/RJ/k7tr33v7e5/4U+COxsAmeRRw2NMpQBgEJJvUmM2B9C+QCDulxE8EqQ0bRD2Q+iII+auCui3AZ7AzqcCDyBcSgUg0amxRfoTFLzSJHW36yB8KiXMCF/QkRH+bYOYGGHS/TnsnB+zRYGq/FFEj8AZc2cEqtw3NkXccP5DiS+2lwJlwBc7LBVrsjkGS+sRsGYJGI/rg/bzogLqWpc2YmWd2fzMEKYSD0eqI3pfEZHscv5DhitHmuodv3xALwNJLEwIsYdbhBgzJ4kZnp5IiJGl1CKfp63J7FUXtGhNSTnG4EVU7mrzWqWfWgkp16PshYg6UxFc291lLFhQhV16qa5odkSztZGkqeU4aygHiOhLSqFqeDv+LwXUigTknTFE8LVusthfu7ddh21OKsr46BXJhCsJoPNqZuJ2HdNLY9iNDIqek53aKbpBK9EgYRy5mKvWSGIWOOAtyl3SXRbwhrgmpRsSb+Ux8DMpnpdyeTfAAAAABJRU5ErkJggg=="
+                  class="me-2"
+                  alt="google"
+                />
+              </div>
+            </a>
+            <a href="#" class="btn btn-gray-100 fs-6 py-2 px-3 w-100">
+              <div class="d-flex justify-content-center align-items-center">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFtSURBVHgBvVO9SsRAEJ7d5OQKD9MdJ4gRfABLKznxAbTTVvEKnyLJA1hfcYpoZ2djf/oE2sqBsTEICgFF1Euyzk6SY/N3P819ELIz+fbb2ZkvAPNC/cIz5TOJx8qSes9rCxAWgNjA0EjSPrJvahp3fg5b7kQh3vMsBpENYyCA21Gn5VQKVYkYCxxWG5zWjx9BqdhIqN71zKEePedFds06nG8ZJCaxfv0G7meYbI62g85KX671dMOwFll4TAGnm0skcvX0De5XCP6vUK6oYR8hK4TZPSi5krmo0fro3i+eEg+DENfbpfEaRaHSoWYoqTX0KsZgvwlmQxvFwfEyvfWz11J+XNEJ+SJT+wv2I22qhFzfeX/5/X7qKaUi9oB3bqfRzu079Wdw0KRYTqsANGi2IsqFDsyIEF1eEJJ+QF9MLUZc5Vfh6kcUs6cRkxzJVXM8T5KEMOBr2K9Lzpk6AJ8x1k/cbMOsEEKY8oF54R/eZYMUmIQwhAAAAABJRU5ErkJggg=="
+                  class="me-2"
+                  alt="facebook"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="d-flex justify-content-center align-items-center"></div>
+          <span
+            >還沒有帳戶?<a
+              href="register.html"
+              class="text-decoration-underline link-offset-2 fw-semibold"
+              >註冊</a
+            ></span
+          >
+        </form>
+      </div>
+    </section>
+
+    <!-- <%- include('./layout/footer'); -%> -->
+
+    <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

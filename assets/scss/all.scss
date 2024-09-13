@@ -11,9 +11,13 @@
 @import "./base/typography";
 @import "./base/base.scss";
 
+// 第三方套件
 @import "./component/swiper";
 
+// 模組頁面
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 
+// 一般頁面
 @import "./pages/index.scss";
+@import "./pages/login.scss";
