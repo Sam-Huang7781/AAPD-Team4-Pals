@@ -15,6 +15,8 @@ $blue-300: #9AB2D4;
 
 // login page
 $rock-blue:#8AA0CA;
+$text-tertiary:#CAC8BE;
+$cta-secondary:#948D7B;
 
 $custom-colors: (
   "primary-light": $primary-light,
@@ -27,8 +29,10 @@ $custom-colors: (
   "green-300": $green-300,
   "purple-400": $purple-400,
   "blue-300": $blue-300,
-  
+
   "rock-blue": $rock-blue,
+  "text-tertiary": $text-tertiary,
+  "cta-secondary": $cta-secondary,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

@@ -1,3 +1,10 @@
-.login{
-    
+.login {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Creates 5 equal columns */
+    gap: -8px; /* Adds space between the items */
+  }
+  input::placeholder{
+    color: #CAC8BE;
+  }
 }

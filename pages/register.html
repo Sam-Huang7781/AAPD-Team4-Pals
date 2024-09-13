@@ -88,10 +88,18 @@
 
         <div class="welcome-text text-center mt-6">
           <h2 class="mb-2 fw-bold fs-7">Welcome</h2>
-          <h3 class="fw-bold fs-7">登入</h3>
+          <h3 class="fw-bold fs-7">歡迎註冊</h3>
         </div>
         <form action="" class="user-login w-100" novalidate="">
           <div class="mt-10 mx-8">
+            <!-- <label for="nickname" class="form-label fw-bold">會員帳號</label> -->
+            <input
+              type="text"
+              class="form-control rounded-4 border-primary-dark text-tertiary border-2 fz-14 py-4 px-5 mb-6"
+              id="nickname"
+              placeholder="使用者暱稱"
+              required=""
+            />
             <!-- <label for="account" class="form-label fw-bold">會員帳號</label> -->
             <input
               type="text"
@@ -106,7 +114,7 @@
               <!-- <label for="password" class="form-label fw-bold">密碼</label> -->
               <input
                 type="password"
-                class="form-control rounded-4 border-primary-dark border-2 fz-14 py-4 px-5"
+                class="form-control rounded-4 border-primary-dark border-2 fz-14 py-4 px-5 mb-6"
                 id="password"
                 placeholder="密碼"
                 required=""
@@ -114,17 +122,11 @@
               <i class="bi bi-eye position-absolute end-0 me-5 fs-4"></i>
             </div>
             <button
-              type="button"
-              class="btn link-rock-blue fs-3 fw-bold p-0 mt-6 mb-8"
-            >
-              忘記密碼？
-            </button>
-            <button
               type="submit"
               class="btn btn-primary-dark rounded-4 w-100"
               style="box-shadow: 0px 2px 0px 0px #d9c5a5"
             >
-              登入
+              建立新帳號
             </button>
             <hr class="mt-10 mb-0 mx-n3" />
           </div>
@@ -134,7 +136,7 @@
             <p class="py-3">使用第三方帳號登入</p>
           </div>
           <div
-            class="login-platform d-flex justify-content-center gap-5 mt-4 mb-6"
+            class="login-platform d-flex justify-content-center gap-5 mt-2 mb-6"
           >
             <a
               href="#"
@@ -158,10 +160,10 @@
         </div>
         <div class="d-flex justify-content-center align-items-center pb-18">
           <span class="fw-semibold fs-4 text-center"
-            >還沒有帳戶?<a
+            >已有帳戶?<a
               href="register.html"
               class="text-decoration-underline fw-semibold link-rock-blue ms-2"
-              >註冊</a
+              >登入</a
             ></span
           >
         </div>
