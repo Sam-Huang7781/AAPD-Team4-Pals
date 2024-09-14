@@ -1,0 +1,62 @@
+.list-group {
+  border-radius: 1rem;
+
+  &-item {
+    color: $dune-700;
+    background: $dune-100;
+    border: 0;
+    border-radius: 0.75rem !important;
+
+    &:hover,
+    &:active,
+    &.active {
+      color: $dune-50;
+      background: $dune-900;
+      border-radius: 0.75rem !important;
+    }
+  }
+}
+
+.table {
+  background-color: transparent;
+  font-weight: bold;
+
+  th,
+  td {
+    background-color: transparent !important;
+    width: 52.2857px;
+  }
+
+  td {
+    color: $dune-700;
+    padding: 0;
+
+    &.today {
+      color: $primary-orange;
+    }
+  }
+}
+
+.doll-wrapper {
+  width: 50px;
+  margin: 0 auto;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.mood-statistic {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 1px solid #d9c5a5;
+}
+
+.progress {
+  background-color: #fde7d7;
+
+  &-bar {
+    background-color: $primary-orange;
+  }
+}
