@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>homepage</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <section
+      class="meditate-count vh-100 d-flex flex-column justify-content-center align-items-center position-relative"
+    >
+      <!-- meditate-count 冥想倒數頁 倒數透明遮罩 -->
+      <section
+        class="container d-none text-center text-white position-absolute z-2 d-flex justify-content-center align-items-center"
+        style="
+          background: rgba(60, 60, 60, 0.8);
+          transition: opacity 1s ease, visibility 0s 1s;
+          height: 844px;
+          width: 100%;
+        "
+        id="countdown-overlay"
+      >
+        <h2 class="mb-40" id="countdown-number" style="font-size: 128px">3</h2>
+      </section>
+      <!-- meditate-programming 冥想進行頁 -->
+      <div class="container bg-primary-dark">
+        <div class="mx-n3 pt-11 pb-22">
+          <div
+            class="ui-top d-flex align-items-center justify-content-center px-12 py-10"
+          >
+            <img src="../assets/images/meditateCount/Close_48.png" alt="" />
+            <h3 class="fs-5 mx-12 text-white">正念冥想</h3>
+            <img src="../assets/images/meditateCount/voice_48.png" alt="" />
+          </div>
+          <h4 class="meditate-instruction fs-5 text-white text-center">深吸氣，數到四</h4>
+          <div
+            class="meditate-progress d-flex justify-content-center p-8 position-relative"
+          >
+            <div id="progress-circle" style="width: 288px"></div>
+            <img
+              src="../assets/images/meditateCount/dolls-meditiating_Y.png"
+              class="position-absolute top-50 start-50 translate-middle object-fit-none"
+              alt="dolls_meditiating_Y"
+            />
+          </div>
+          <h4 class="fs-5 text-text-tertiary text-center mt-4">您已經冥想了</h4>
+          <time
+            datetime="00:40"
+            class="d-block fs-10 text-text-tertiary fw-bold text-center mx-6"
+            id="countDown"
+            style="letter-spacing: 4.8px"
+            >00:40</time
+          >
+          <div
+            class="ui-bottom d-flex align-items-center justify-content-center px-12 py-3"
+          >
+            <img src="../assets/images/meditateCount/back_28.png" alt="" />
+            <img
+              src="../assets/images/meditateCount/StopButton_80.png"
+              class="mx-12"
+              id="start-meditation"
+              alt=""
+            />
+            <img src="../assets/images/meditateCount/forth_28.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <%- include('./layout/footer'); -%> -->
+
+    <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../node_modules/progressbar.js/dist/progressbar.min.js"></script>
+    <script>
+      var bar = new ProgressBar.Circle("#progress-circle", {
+        strokeWidth: 4,
+        easing: "easeInOut",
+        duration: 1400,
+        color: "#ffcc00",
+        trailColor: "#eee",
+        trailWidth: 4,
+        svgStyle: null,
+      });
+
+      // 更新進度
+      bar.animate(0.125); // 75% progress
+    </script>
+
+    <script>
+      document
+        .getElementById("start-meditation")
+        .addEventListener("click", function () {
+          var countdownOverlay = document.getElementById("countdown-overlay");
+          var countdownNumber = document.getElementById("countdown-number");
+          var meditateInstruction = document.getElementById("meditate-instruction");
+          var countDown = document.getElementById("countDown");
+          var count = 3;
+
+          // 立即更新倒數數字並顯示倒數頁
+          countdownNumber.textContent = count;
+          countdownOverlay.classList.remove("d-none");
+          countdownOverlay.style.opacity = "1";
+          countdownOverlay.style.visibility = "visible";
+
+          // 每秒減少倒數
+          var countdownInterval = setInterval(function () {
+            count--;
+            countdownNumber.textContent = count;
+
+            if (count === 0) {
+              clearInterval(countdownInterval);
+
+              // 倒數結束，開始淡出效果
+              countdownOverlay.style.opacity = "0";
+
+              setTimeout(function () {
+                countdownOverlay.style.visibility = "hidden";
+                countdownOverlay.classList.add("d-none"); // 確保過渡完成後再加入 d-none
+              }, 1000); // 等待過渡效果完成 (1 秒)
+            //   meditateInstruction.textContent = "深呼吸，數到四";
+            //   countdownNumber.textContent = "00:40";
+              // 進入冥想進行頁
+              // 這裡你可以觸發任何進行頁面的功能或效果
+            }
+          }, 1000); // 每1秒執行一次
+        });
+    </script>
+  </body>
+</html>
