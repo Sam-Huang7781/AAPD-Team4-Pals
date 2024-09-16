@@ -61,14 +61,14 @@
           <div
             class="ui-bottom d-flex align-items-center justify-content-center px-12 py-3"
           >
-            <img src="../assets/images/meditateCount/back_28.png" alt="" />
+            <img src="../assets/images/meditateCount/back.svg" alt="" />
             <img
               src="../assets/images/meditateCount/StopButton_80.png"
               class="mx-12"
               id="start-meditation"
               alt=""
             />
-            <img src="../assets/images/meditateCount/forth_28.png" alt="" />
+            <img src="../assets/images/meditateCount/forth.svg" alt="" />
           </div>
         </div>
       </div>
@@ -125,8 +125,8 @@
                 countdownOverlay.style.visibility = "hidden";
                 countdownOverlay.classList.add("d-none"); // 確保過渡完成後再加入 d-none
               }, 1000); // 等待過渡效果完成 (1 秒)
-            //   meditateInstruction.textContent = "深呼吸，數到四";
-            //   countdownNumber.textContent = "00:40";
+
+              window.location.href = "./meditate-complete.html";
               // 進入冥想進行頁
               // 這裡你可以觸發任何進行頁面的功能或效果
             }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>homepage</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <section
+      class="cheer-up vh-100 d-flex flex-column justify-content-center align-items-center"
+    >
+      <!-- Vertically centered modal -->
+      <div
+        class="modal fade show"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        style="display: block"
+      >
+        <div class="modal-dialog modal-dialog-centered" style="width: 272px">
+          <div class="modal-content bg-primary-light rounded-4">
+            <div class="modal-header d-flex flex-column position-relative pb-6">
+              <h5
+                class="modal-title position-absolute fs-5 my-1"
+                id="exampleModalLabel"
+              >
+                相信你自己！
+              </h5>
+              <a type="button" class="btn-close" href="index.html"></a>
+            </div>
+            <div class="modal-body d-flex flex-column">
+              <img
+                src="../assets/images/dollCard/mood_laugh_Y_224x200.png"
+                alt=""
+              />
+              <h4 class="fs-4 mb-6">
+                每一步都是向前的努力，堅持下去，你會看到成功的果實。
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- countdown-mask 倒數透明遮罩 -->
+      <section
+        class="container d-flex text-center text-white position-absolute z-2 d-flex justify-content-center align-items-center"
+        style="
+          background: rgba(60, 60, 60, 0.8);
+          transition: opacity 1s ease, visibility 0s 1s;
+          height: 844px;
+          width: 100%;
+        "
+        id="countdown-overlay"
+      ></section>
+
+      <div class="container bg-primary-light">
+        <div class="mx-n3 pt-11 pb-20">
+          <!-- meditate-programming 冥想進行頁 -->
+          <div class="diologue d-flex flex-column align-items-center my-10">
+            <h3
+              class="d-inline fs-5 bg-white text-black py-5 px-7 rounded-pill"
+            >
+              完成了一次很棒的冥想呢！
+            </h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="28"
+              viewBox="0 0 32 28"
+              fill="none"
+              class="mt-n2"
+            >
+              <path
+                d="M19.4641 26C17.9245 28.6667 14.0755 28.6667 12.5359 26L1.27757 6.5C-0.262028 3.83334 1.66247 0.5 4.74167 0.5L27.2583 0.5C30.3375 0.5 32.262 3.83333 30.7224 6.5L19.4641 26Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div
+            class="meditate-progress d-flex justify-content-center position-relative"
+          >
+            <div id="static-progress-circle" style="width: 288px"></div>
+            <img
+              src="../assets/images/meditateComplete/VectorLeft.svg"
+              class="position-absolute end-0 top-50 me-4"
+              style="transform: scaleX(-1)"
+              alt=""
+            />
+            <img
+              src="../assets/images/meditateCount/dolls-meditiating_YL_Y.png"
+              class="position-absolute top-50 start-50 translate-middle object-fit-none"
+              alt="dolls_meditiating_Y"
+            />
+            <img
+              src="../assets/images/meditateComplete/VectorLeft.svg"
+              class="position-absolute start-0 top-50 ms-4"
+              alt=""
+            />
+          </div>
+          <div class="bottom d-flex flex-column align-items-center">
+            <h4 class="fs-5 text-text-secondary fw-bold mt-12">您已經冥想了</h4>
+            <time
+              datetime="05:00"
+              class="d-block fs-10 text-text-secondary fw-bold mx-6 mb-8"
+              id="countdown"
+              style="letter-spacing: 4.8px"
+              >05:00</time
+            >
+            <img
+              src="../assets/images/meditateComplete/PlayButton_80.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <%- include('./layout/footer'); -%> -->
+
+    <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../node_modules/progressbar.js/dist/progressbar.min.js"></script>
+    <script>
+      var bar = new ProgressBar.Circle("#static-progress-circle", {
+        strokeWidth: 4,
+        color: "#ffcc00",
+        trailColor: "#eee",
+        trailWidth: 4,
+        svgStyle: null,
+        duration: 0, // 設置動畫持續時間為 0
+      });
+      // 直接設置進度為 1.0 (100%)，不使用 animate 方法
+      bar.set(1.0);
+
+      // 監聽滑塊變動，動態更新進度條
+      var slider = document.getElementById("progress-slider");
+
+      slider.addEventListener("input", function () {
+        var value = slider.value; // 獲取滑塊的值（0~1之間的數字）
+        bar1.set(value); // 更新進度條
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+.choose-moodToday {
+  /* Modal 外觀調整 */
+  .modal-dialog {
+    max-width: 284px; /* 固定寬度 */
+  }
+  .progress-container {
+    position: relative;
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    svg {
+      transform: rotate(-90deg);
+      border-radius: 12px;
+    }
+  }
+  .slider {
+    -webkit-appearance: none;
+    width: 340px; /* 定義滑塊的長度，會在 transform 後變為高度 */
+    background: transparent;
+    position: absolute;
+    transform: rotate(-90deg) translateX(-50%); /* 將滑塊旋轉 90 度，使其垂直顯示 */
+    top: -12px;
+    left: -52px;
+    z-index: 10; /* 使滑塊位於進度條之上 */
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: url("../assets/images/meditateComplete/level_btn_40.png") no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    background: url("../assets/images/meditateComplete/level_btn_40.png") no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+}

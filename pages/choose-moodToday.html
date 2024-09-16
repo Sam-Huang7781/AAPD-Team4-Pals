@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>homepage</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <section
+      class="choose-moodToday vh-100 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div
+        class="modal fade show"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        style="display: block"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-primary-light rounded-4 p-6">
+            <div class="modal-header border-0">
+              <p class="fs-4 fw-bold text-center">
+                您完成了 5 分鐘正念冥想！<br />現在您的感覺如何？
+              </p>
+            </div>
+            <div class="modal-body position-relative">
+              <ul class="d-flex flex-column p-0 m-0 gap-6">
+                <li class="d-flex justify-content-between align-items-center">
+                  <div class="number fw-bold fz-14">
+                    非常棒<span class="ms-0">10</span>
+                  </div>
+                  <img
+                    src="../assets/images/meditateComplete/face_Y_44.png"
+                    alt=""
+                  />
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <div class="number fw-bold fz-14">
+                    很好<span class="ms-5">8</span>
+                  </div>
+                  <img
+                    src="../assets/images/meditateComplete/face_O_44.png"
+                    alt=""
+                  />
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <div class="number fw-bold fz-14">
+                    平靜<span class="ms-5">6</span>
+                  </div>
+                  <img
+                    src="../assets/images/meditateComplete/face_G_44.png"
+                    alt=""
+                  />
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <div class="number fw-bold fz-14">
+                    低落<span class="ms-5">4</span>
+                  </div>
+                  <img
+                    src="../assets/images/meditateComplete/face_P_44.png"
+                    alt=""
+                  />
+                </li>
+                <li class="d-flex justify-content-between align-items-center">
+                  <div class="number fw-bold fz-14">
+                    沮喪<span class="ms-5">2</span>
+                  </div>
+                  <img
+                    src="../assets/images/meditateComplete/face_B_44.png"
+                    alt=""
+                  />
+                </li>
+              </ul>
+
+              <!-- 使用 ProgressBar.js 來展示橙色進度條 -->
+              <div
+                id="orange-progress"
+                class="progress-container position-absolute start-50 top-50 translate-middle"
+              ></div>
+              <!-- 滑動條 -->
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.1"
+                value="0.5"
+                id="progress-slider"
+                class="slider"
+                orient="vertical"
+              />
+            </div>
+            <div class="modal-footer border-0">
+              <a
+                type="button"
+                class="btn btn-primary-dark w-100"
+                href="./cheer-up.html"
+              >
+                確定
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- countdown-mask 倒數透明遮罩 -->
+      <section
+        class="container d-flex text-center text-white position-absolute z-2 d-flex justify-content-center align-items-center"
+        style="
+          background: rgba(60, 60, 60, 0.9);
+          transition: opacity 1s ease, visibility 0s 1s;
+          height: 844px;
+          width: 100%;
+        "
+        id="countdown-overlay"
+      ></section>
+
+      <div class="container bg-primary-light">
+        <div class="mx-n3 pt-11 pb-20">
+          <!-- meditate-programming 冥想進行頁 -->
+          <div class="diologue d-flex flex-column align-items-center my-10">
+            <h3
+              class="d-inline fs-5 bg-white text-black py-5 px-7 rounded-pill"
+            >
+              完成了一次很棒的冥想呢！
+            </h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="28"
+              viewBox="0 0 32 28"
+              fill="none"
+              class="mt-n2"
+            >
+              <path
+                d="M19.4641 26C17.9245 28.6667 14.0755 28.6667 12.5359 26L1.27757 6.5C-0.262028 3.83334 1.66247 0.5 4.74167 0.5L27.2583 0.5C30.3375 0.5 32.262 3.83333 30.7224 6.5L19.4641 26Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div
+            class="meditate-progress d-flex justify-content-center position-relative"
+          >
+            <div id="static-progress-circle" style="width: 288px"></div>
+            <img
+              src="../assets/images/meditateComplete/VectorLeft.svg"
+              class="position-absolute end-0 top-50 me-4"
+              style="transform: scaleX(-1)"
+              alt=""
+            />
+            <img
+              src="../assets/images/meditateCount/dolls-meditiating_YL_Y.png"
+              class="position-absolute top-50 start-50 translate-middle object-fit-none"
+              alt="dolls_meditiating_Y"
+            />
+            <img
+              src="../assets/images/meditateComplete/VectorLeft.svg"
+              class="position-absolute start-0 top-50 ms-4"
+              alt=""
+            />
+          </div>
+          <div class="bottom d-flex flex-column align-items-center">
+            <h4 class="fs-5 text-text-secondary fw-bold mt-12">您已經冥想了</h4>
+            <time
+              datetime="05:00"
+              class="d-block fs-10 text-text-secondary fw-bold mx-6 mb-8"
+              id="countdown"
+              style="letter-spacing: 4.8px"
+              >05:00</time
+            >
+            <img
+              src="../assets/images/meditateComplete/PlayButton_80.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <%- include('./layout/footer'); -%> -->
+
+    <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../node_modules/progressbar.js/dist/progressbar.min.js"></script>
+    <script>
+      var bar = new ProgressBar.Circle("#static-progress-circle", {
+        strokeWidth: 4,
+        color: "#ffcc00",
+        trailColor: "#eee",
+        trailWidth: 4,
+        svgStyle: null,
+        duration: 0, // 設置動畫持續時間為 0
+      });
+      // 直接設置進度為 1.0 (100%)，不使用 animate 方法
+      bar.set(1.0);
+
+      var bar1 = new ProgressBar.Line("#orange-progress", {
+        strokeWidth: 4,
+        easing: "easeInOut",
+        duration: 1400,
+        color: "#F0743E",
+        trailColor: "rgba(253, 231, 215, 0.8)",
+        trailWidth: 10,
+        svgStyle: { width: "100%", height: "100%" },
+        from: { color: "#F0743E" },
+        to: { color: "#F0743E" },
+      });
+
+      // 初始進度條設置為50%
+      bar1.set(0.5);
+
+      // 監聽滑塊變動，動態更新進度條
+      var slider = document.getElementById("progress-slider");
+
+      slider.addEventListener("input", function () {
+        var value = slider.value; // 獲取滑塊的值（0~1之間的數字）
+        bar1.set(value); // 更新進度條
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
