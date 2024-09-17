@@ -1,0 +1,18 @@
+.btn-outline-cta-secondary {
+  transition: 0.2s;
+
+  &:hover {
+    outline: 4px solid #F6A87B;
+    color: $cta-secondary;
+    border-color: $cta-secondary;
+    background-color: #fde7d7;
+  }
+
+  &:active,
+  &.active {
+    outline: 4px solid $primary-orange !important;
+    color: $cta-secondary !important;
+    border-color: $cta-secondary !important;
+    background-color: transparent !important;
+  }
+}

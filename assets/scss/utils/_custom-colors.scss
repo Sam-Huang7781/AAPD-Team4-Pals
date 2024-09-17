@@ -19,6 +19,19 @@ $text-tertiary:#CAC8BE;
 $text-secondary:#72695C;
 $cta-secondary:#948D7B;
 
+// dune
+$dune-50: #f4f4f2;
+$dune-100: #e4e2dd;
+$dune-200: #cac8be;
+$dune-300: #aca798;
+$dune-400: #948d7b;
+$dune-500: #857d6d;
+$dune-600: #72695c;
+$dune-700: #5c534c;
+$dune-800: #504943;
+$dune-900: #383330;
+$dune-950: #272321;
+
 $custom-colors: (
   "primary-light": $primary-light,
   "primary-dark": $primary-dark,
@@ -35,6 +48,18 @@ $custom-colors: (
   "text-tertiary": $text-tertiary,
   "text-secondary": $text-secondary,
   "cta-secondary": $cta-secondary,
+
+  "dune-50":  $dune-50,
+  "dune-100": $dune-100,
+  "dune-200": $dune-200,
+  "dune-300": $dune-300,
+  "dune-400": $dune-400,
+  "dune-500": $dune-500,
+  "dune-600": $dune-600,
+  "dune-700": $dune-700,
+  "dune-800": $dune-800,
+  "dune-900": $dune-900,
+  "dune-950": $dune-950,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
