@@ -33,8 +33,8 @@ export default defineConfig({
   ],
   server: {
     // 啟動 server 時預設開啟的頁面
-    // host: '0.0.0.0', // 允許所有 IP 訪問
-    // port: 5173, // 你使用的端口號
+    host: '0.0.0.0', // 允許所有 IP 訪問
+    port: 5173, // 你使用的端口號
     open: 'pages/index.html',
   },
   build: {
