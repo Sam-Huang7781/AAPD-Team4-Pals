@@ -1,75 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>homepage</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
 
-    <section
-      class="meditate-count vh-100 d-flex flex-column justify-content-center align-items-center position-relative"
-    >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>homepage</title>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
+
+    <section class="meditate-count bg-primary-dark position-relative">
       <!-- meditate-count 冥想倒數頁 倒數透明遮罩 -->
-      <section
-        class="container d-none text-center text-white position-absolute z-2 d-flex justify-content-center align-items-center"
-        style="
-          background: rgba(60, 60, 60, 0.8);
-          transition: opacity 1s ease, visibility 0s 1s;
-          height: 844px;
-          width: 100%;
-        "
-        id="countdown-overlay"
-      >
-        <h2 class="mb-40" id="countdown-number" style="font-size: 128px">3</h2>
+      <section class="d-none position-absolute w-100 h-100 z-2 d-flex justify-content-center align-items-center"
+        style="background: rgba(60, 60, 60, 0.8); transition: opacity 1s ease, visibility 0s 1s;"
+        id="countdown-overlay">
+        <h2 class="text-white mb-40" id="countdown-number" style="font-size: 128px">3</h2>
       </section>
+
       <!-- meditate-programming 冥想進行頁 -->
-      <div class="container bg-primary-dark">
-        <div class="mx-n3 pt-11 pb-22">
-          <div
-            class="ui-top d-flex align-items-center justify-content-center px-12 py-10"
-          >
-            <img src="../assets/images/meditateCount/Close_48.png" alt="" />
-            <h3 class="fs-5 mx-12 text-white">正念冥想</h3>
-            <img src="../assets/images/meditateCount/voice_48.png" alt="" />
-          </div>
-          <h4 class="meditate-instruction fs-5 text-white text-center">深吸氣，數到四</h4>
-          <div
-            class="meditate-progress d-flex justify-content-center p-8 position-relative"
-          >
-            <div id="progress-circle" style="width: 288px"></div>
-            <img
-              src="../assets/images/meditateCount/dolls-meditiating_Y.png"
-              class="position-absolute top-50 start-50 translate-middle object-fit-none"
-              alt="dolls_meditiating_Y"
-            />
-          </div>
-          <h4 class="fs-5 text-text-tertiary text-center mt-4">您已經冥想了</h4>
-          <time
-            datetime="00:40"
-            class="d-block fs-10 text-text-tertiary fw-bold text-center mx-6"
-            id="countDown"
-            style="letter-spacing: 4.8px"
-            >00:40</time
-          >
-          <div
-            class="ui-bottom d-flex align-items-center justify-content-center px-12 py-3"
-          >
-            <img src="../assets/images/meditateCount/back.svg" alt="" />
-            <img
-              src="../assets/images/meditateCount/StopButton_80.png"
-              class="mx-12"
-              id="start-meditation"
-              alt=""
-            />
-            <img src="../assets/images/meditateCount/forth.svg" alt="" />
-          </div>
+      <div class="container pb-16">
+        <div class="ui-top d-flex align-items-center justify-content-center gap-12 py-10">
+          <img src="/assets/images/meditateCount/Close_48.png" alt="close icon" />
+          <h3 class="fs-5 text-white">正念冥想</h3>
+          <img src="/assets/images/meditateCount/voice_48.png" alt="voice icon" />
+        </div>
+
+        <h4 class="meditate-instruction fs-5 text-white text-center">深吸氣，數到四</h4>
+
+        <div class="meditate-progress d-flex justify-content-center py-8 mb-3 position-relative">
+          <div id="progress-circle" style="width: 288px"></div>
+          <!-- <img src="/assets/images/meditateCount/dolls-meditiating_Y.png"
+            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls_meditiating_Y" /> -->
+          <img src="/assets/images/meditateCount/dolls-meditiating_Y.svg"
+            class="position-absolute top-50 start-50 translate-middle z-1" alt="dolls_meditiating_Y">
+          <img src="/assets/images/meditateCount/aurora.png" class="position-absolute top-50 start-50 translate-middle"
+            alt="aurora">
+        </div>
+
+        <div class="text-center">
+          <h4 class="fs-5 text-text-tertiary">您已經冥想了</h4>
+          <time datetime="00:00" class="d-block fs-10 text-text-tertiary fw-bold mx-6 my-2" id="countDown"
+            style="letter-spacing: 4.8px">00:00</time>
+        </div>
+
+        <div class="ui-bottom d-flex align-items-center justify-content-center gap-12 py-3">
+          <button type="button" class="btn btn-transparent">
+            <img src="/assets/images/meditateCount/back.svg" alt="backward icon" />
+          </button>
+          <button type="button" class="btn btn-transparent">
+            <img src="/assets/images/meditateCount/PlayButton_80.png" id="start-meditation" alt="play icon" />
+          </button>
+          <button type="button" class="btn btn-transparent">
+            <img src="/assets/images/meditateCount/forth.svg" alt="forward icon" />
+          </button>
         </div>
       </div>
     </section>
@@ -92,17 +78,19 @@
 
       // 更新進度
       bar.animate(0.125); // 75% progress
-    </script>
 
-    <script>
       document
         .getElementById("start-meditation")
         .addEventListener("click", function () {
+          var startMeditation = document.querySelector('#start-meditation');
           var countdownOverlay = document.getElementById("countdown-overlay");
           var countdownNumber = document.getElementById("countdown-number");
           var meditateInstruction = document.getElementById("meditate-instruction");
           var countDown = document.getElementById("countDown");
           var count = 3;
+
+          // 更換 icon
+          startMeditation.setAttribute('src', '/assets/images/meditateCount/StopButton_80.png');
 
           // 立即更新倒數數字並顯示倒數頁
           countdownNumber.textContent = count;
@@ -133,5 +121,6 @@
           }, 1000); // 每1秒執行一次
         });
     </script>
-  </body>
+</body>
+
 </html>
