@@ -11,6 +11,7 @@
 @import "./base/typography";
 @import "./base/base.scss";
 
+@import "./component/button";
 // 第三方套件
 @import "./component/swiper";
 
@@ -21,3 +22,5 @@
 // 一般頁面
 @import "./pages/index.scss";
 @import "./pages/login.scss";
+@import "./pages/calendar";
+@import "./pages/settings";
