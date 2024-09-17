@@ -12,14 +12,12 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-
-    <!-- meditate-count 冥想倒數頁 -->
-    <!-- countdown-mask 倒數透明遮罩 -->
+    
     <section
-      class="meditate-count vh-100 d-flex flex-column justify-content-center align-items-center"
+      class="meditate-count bg-primary-light d-flex flex-column justify-content-center align-items-center"
     >
-      <div class="container bg-primary-light">
-        <div class="mx-n3 pt-11 pb-20">
+      <div class="container">
+        <div class="mx-n3 pb-20">
           <!-- meditate-programming 冥想進行頁 -->
           <div class="diologue d-flex flex-column align-items-center my-10">
             <h3
@@ -57,7 +55,7 @@
             </h4>
             <time
               datetime="05:00"
-              class="d-block fs-10 text-text-secondary fw-bold mx-6 mb-8"
+              class="d-block fs-10 text-text-secondary fw-bold mx-6 my-2"
               id="countdown"
               style="letter-spacing: 4.8px"
               >05:00</time
@@ -65,7 +63,8 @@
             <a href="./choose-moodToday.html">
             <img
               src="../assets/images/meditateCount/arrow.png"
-              alt=""
+              alt="arrow"
+              class="mt-6"
             /></a>
           </div>
         </div>
