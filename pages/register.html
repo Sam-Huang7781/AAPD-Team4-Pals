@@ -89,12 +89,13 @@
             <h2 class="mb-2 fw-bold fs-7">Welcome</h2>
             <h3 class="fw-bold fs-7">歡迎註冊</h3>
           </div>
-          <form action="" class="user-login w-100" novalidate="">
+
+          <form action="POST" class="user-login w-100" novalidate="">
             <div class="mt-10 mx-8">
               <!-- <label for="nickname" class="form-label fw-bold">會員帳號</label> -->
               <input
                 type="text"
-                class="form-control rounded-4 border-primary-dark text-tertiary border-2 fz-14 py-4 px-5 mb-6"
+                class="form-control rounded-4 border-primary-dark border-2 fz-14 py-4 px-5 mb-6"
                 id="nickname"
                 placeholder="使用者暱稱"
                 required=""
@@ -102,7 +103,7 @@
               <!-- <label for="account" class="form-label fw-bold">會員帳號</label> -->
               <input
                 type="text"
-                class="form-control rounded-4 border-primary-dark text-tertiary border-2 fz-14 py-4 px-5 mb-6"
+                class="form-control rounded-4 border-primary-dark border-2 fz-14 py-4 px-5 mb-6"
                 id="account"
                 placeholder="帳戶"
                 required=""
@@ -116,30 +117,21 @@
                   placeholder="密碼"
                   required=""
                 />
-                <button
-                  type="button"
-                  class="btn btn-transparent position-absolute top-50 translate-middle-y end-0 me-2"
-                >
+                <button type="button" class="btn btn-transparent position-absolute top-50 translate-middle-y end-0 me-2">
                   <i class="bi bi-eye fs-4 text-text-tertiary"></i>
                 </button>
               </div>
-              <button
-                type="submit"
-                class="btn btn-primary-dark rounded-4 w-100 fs-5 py-2"
-                style="box-shadow: 0px 2px 0px 0px #d9c5a5"
-              >
+              <button type="submit" class="btn btn-primary-dark rounded-4 w-100 fs-5 py-2" style="box-shadow: 0px 2px 0px 0px #d9c5a5">
                 建立新帳號
               </button>
-              <hr class="mt-10 mb-0 mx-n3" />
             </div>
           </form>
-          <div class="other-way">
-            <div class="text-center text-gray-300 fs-4 fw-semibold">
-              <p class="py-3">使用第三方帳號註冊</p>
-            </div>
-            <div
-              class="login-platform d-flex justify-content-center gap-5 mt-2 mb-6"
-            >
+
+          <div class="other-way mx-8 mt-10 border-top border-primary-dark">
+            <p class="text-center text-gray-300 fs-4 fw-semibold py-3">
+              使用第三方帳號註冊
+            </p>
+            <div class="login-platform d-flex justify-content-center gap-5 mt-2 mb-6">
               <a
                 href="#"
                 class="btn btn-gray-100 fs-6 border-cta-secondary border-2 rounded-4"
@@ -160,15 +152,13 @@
               </a>
             </div>
           </div>
-          <div class="d-flex justify-content-center align-items-center">
-            <span class="fw-semibold fs-4 text-center"
-              >已有帳戶?<a
-                href="register.html"
-                class="text-decoration-underline fw-semibold link-rock-blue ms-2"
-                >登入</a
-              ></span
-            >
-          </div>
+
+          <p class="fs-4 text-center fw-semibold">
+            已有帳戶?
+            <a href="login.html" class="text-decoration-underline fw-semibold link-rock-blue ms-2">
+            登入
+            </a>
+          </p>
         </div>
       </div>
     </section>
