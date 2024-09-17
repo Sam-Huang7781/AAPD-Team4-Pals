@@ -1,18 +1,18 @@
 .list-group {
-  border-radius: 1rem;
+  border-radius: 50rem;
 
   &-item {
     color: $dune-700;
     background: $dune-100;
     border: 0;
-    border-radius: 0.75rem !important;
+    border-radius: 50rem !important;
 
     &:hover,
     &:active,
     &.active {
       color: $dune-50;
       background: $dune-900;
-      border-radius: 0.75rem !important;
+      border-radius: 50rem !important;
     }
   }
 }
