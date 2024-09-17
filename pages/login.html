@@ -15,21 +15,21 @@
 
     <!-- login -->
     <section
-      class="login vh-100 d-flex flex-column justify-content-center align-items-center"
+      class="login bg-primary-light"
     >
-      <div class="container bg-primary-light">
-        <div class="pt-25 pb-18">
+      <div class="container">
+        <div class="pt-15 pb-18">
           <div class="grid-container">
             <div class="d-flex flex-column align-items-center mx-n1">
               <img
                 src="../assets/images/homepage/mood_laugh_O_132x120.png"
-                alt=""
+                alt="mood_laugh_O_132x120"
                 class="img-fluid"
                 width="80"
               />
               <img
                 src="../assets/images/homepage/shadow.png"
-                alt=""
+                alt="shadow"
                 class="img-fluid w-50"
               />
             </div>
@@ -102,7 +102,7 @@
                 required=""
               />
               <div
-                class="d-flex align-items-center position-relative text-text-tertiary"
+                class="position-relative"
               >
                 <!-- <label for="password" class="form-label fw-bold">密碼</label> -->
                 <input
@@ -112,17 +112,19 @@
                   placeholder="密碼"
                   required=""
                 />
-                <i class="bi bi-eye position-absolute end-0 me-5 fs-4"></i>
+                <button type="button" class="btn btn-transparent position-absolute top-50 translate-middle-y end-0 me-2">
+                  <i class="bi bi-eye fs-4 text-text-tertiary"></i>
+                </button>
               </div>
               <button
                 type="button"
-                class="btn link-rock-blue fs-3 fw-bold p-0 mt-6 mb-8"
+                class="btn link-rock-blue fz-14 fw-semibold p-0 mt-6 mb-8"
               >
                 忘記密碼？
               </button>
               <button
                 type="submit"
-                class="btn btn-primary-dark rounded-4 w-100"
+                class="btn btn-primary-dark rounded-4 w-100 fs-5 py-2"
                 style="box-shadow: 0px 2px 0px 0px #d9c5a5"
               >
                 登入
