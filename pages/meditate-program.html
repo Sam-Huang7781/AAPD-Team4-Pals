@@ -59,14 +59,13 @@
     <script>
       var bar = new ProgressBar.Circle("#progress-circle", {
         strokeWidth: 4,
-        easing: "easeInOut",
-        duration: 1400,
+        duration: 3000,
         color: "#ffcc00",
         trailColor: "#eee",
         trailWidth: 4,
         svgStyle: null,
       });
-      bar.animate(0.125); // 75% progress
+      bar.animate(0.75); // 75% progress
 
       // 計時器
       let seconds = 38;
