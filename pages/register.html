@@ -1,178 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>homepage</title>
-  </head>
-  <body>
-    <!-- <%- include('./layout/header'); -%> -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>homepage</title>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
 
     <!-- login -->
-    <section
-      class="login vh-100 d-flex flex-column justify-content-center align-items-center"
-    >
-      <div class="container bg-primary-light">
-        <div class="grid-container mt-25">
-          <div class="d-flex flex-column align-items-center mx-n1">
-            <img
-              src="../assets/images/homepage/mood_laugh_O_132x120.png"
-              alt=""
-              class="img-fluid"
-              width="80"
-            />
-            <img
-              src="../assets/images/homepage/shadow.png"
-              alt=""
-              class="img-fluid w-50"
-            />
-          </div>
-          <div class="d-flex flex-column align-items-center mx-n1">
-            <img
-              src="../assets/images/homepage/mood_laugh_P_132x120.png"
-              alt=""
-              class="img-fluid"
-              width="80"
-            />
-            <img
-              src="../assets/images/homepage/shadow.png"
-              alt=""
-              class="img-fluid w-50"
-            />
-          </div>
-          <div class="d-flex flex-column align-items-center mx-n1">
-            <img
-              src="../assets/images/homepage/mood_laugh_Y_132x120.png"
-              alt=""
-              class="img-fluid"
-              width="80"
-            />
-            <img
-              src="../assets/images/homepage/shadow.png"
-              alt=""
-              class="img-fluid w-50"
-            />
-          </div>
-          <div class="d-flex flex-column align-items-center mx-n1">
-            <img
-              src="../assets/images/homepage/mood_laugh_G_132x120.png"
-              alt=""
-              class="img-fluid"
-              width="80"
-            />
-            <img
-              src="../assets/images/homepage/shadow.png"
-              alt=""
-              class="img-fluid w-50"
-            />
-          </div>
-          <div class="d-flex flex-column align-items-center mx-n1">
-            <img
-              src="../assets/images/homepage/mood_laugh_B_132x120.png"
-              alt=""
-              class="img-fluid"
-              width="80"
-            />
-            <img
-              src="../assets/images/homepage/shadow.png"
-              alt=""
-              class="img-fluid w-50"
-            />
-          </div>
-        </div>
-
-        <div class="welcome-text text-center mt-6">
-          <h2 class="mb-2 fw-bold fs-7">Welcome</h2>
-          <h3 class="fw-bold fs-7">歡迎註冊</h3>
-        </div>
-        <form action="" class="user-login w-100" novalidate="">
-          <div class="mt-10 mx-8">
-            <!-- <label for="nickname" class="form-label fw-bold">會員帳號</label> -->
-            <input
-              type="text"
-              class="form-control rounded-4 border-primary-dark text-tertiary border-2 fz-14 py-4 px-5 mb-6"
-              id="nickname"
-              placeholder="使用者暱稱"
-              required=""
-            />
-            <!-- <label for="account" class="form-label fw-bold">會員帳號</label> -->
-            <input
-              type="text"
-              class="form-control rounded-4 border-primary-dark text-tertiary border-2 fz-14 py-4 px-5 mb-6"
-              id="account"
-              placeholder="帳戶"
-              required=""
-            />
-            <div
-              class="d-flex align-items-center position-relative text-text-tertiary"
-            >
-              <!-- <label for="password" class="form-label fw-bold">密碼</label> -->
-              <input
-                type="password"
-                class="form-control rounded-4 border-primary-dark border-2 fz-14 py-4 px-5 mb-6"
-                id="password"
-                placeholder="密碼"
-                required=""
-              />
-              <i class="bi bi-eye position-absolute end-0 me-5 fs-4"></i>
+    <section class="login bg-primary-light">
+      <div class="container">
+        <div class="pt-15 pb-18">
+          <div class="grid-container">
+            <div class="d-flex flex-column align-items-center mx-n1">
+              <img src="../assets/images/homepage/mood_laugh_O_132x120.png" alt="mood_laugh_O_132x120" class="img-fluid"
+                width="80" />
+              <img src="../assets/images/homepage/shadow.png" alt="shadow" class="img-fluid w-50" />
             </div>
-            <button
-              type="submit"
-              class="btn btn-primary-dark rounded-4 w-100"
-              style="box-shadow: 0px 2px 0px 0px #d9c5a5"
-            >
-              建立新帳號
-            </button>
-            <hr class="mt-10 mb-0 mx-n3" />
+            <div class="d-flex flex-column align-items-center mx-n1">
+              <img src="../assets/images/homepage/mood_laugh_P_132x120.png" alt="mood_laugh_P_132x120" class="img-fluid"
+                width="80" />
+              <img src="../assets/images/homepage/shadow.png" alt="shadow" class="img-fluid w-50" />
+            </div>
+            <div class="d-flex flex-column align-items-center mx-n1">
+              <img src="../assets/images/homepage/mood_laugh_Y_132x120.png" alt="mood_laugh_Y_132x120" class="img-fluid"
+                width="80" />
+              <img src="../assets/images/homepage/shadow.png" alt="shadow" class="img-fluid w-50" />
+            </div>
+            <div class="d-flex flex-column align-items-center mx-n1">
+              <img src="../assets/images/homepage/mood_laugh_G_132x120.png" alt="mood_laugh_G_132x120" class="img-fluid"
+                width="80" />
+              <img src="../assets/images/homepage/shadow.png" alt="shadow" class="img-fluid w-50" />
+            </div>
+            <div class="d-flex flex-column align-items-center mx-n1">
+              <img src="../assets/images/homepage/mood_laugh_B_132x120.png" alt="mood_laugh_B_132x120" class="img-fluid"
+                width="80" />
+              <img src="../assets/images/homepage/shadow.png" alt="shadow" class="img-fluid w-50" />
+            </div>
           </div>
-        </form>
-        <div class="other-way">
-          <div class="text-center text-gray-300 fs-4 fw-semibold">
-            <p class="py-3">使用第三方帳號登入</p>
+
+          <div class="welcome-text text-center mt-6">
+            <h2 class="mb-2 fw-bold fs-7">Welcome</h2>
+            <h3 class="fw-bold fs-7">歡迎註冊</h3>
           </div>
-          <div
-            class="login-platform d-flex justify-content-center gap-5 mt-2 mb-6"
-          >
-            <a
-              href="#"
-              class="btn btn-gray-100 fs-6 border-cta-secondary border-2 rounded-4"
-            >
-              <i class="bi bi-apple"></i>
-            </a>
-            <a
-              href="#"
-              class="btn btn-gray-100 fs-6 border-cta-secondary border-2 rounded-4"
-            >
-              <i class="bi bi-google"></i>
-            </a>
-            <a
-              href="#"
-              class="btn btn-gray-100 fs-6 border-cta-secondary border-2 rounded-4"
-            >
-              <i class="bi bi-facebook"></i>
-            </a>
+
+          <form action="POST" class="user-login w-100" novalidate="">
+            <div class="mt-10 mx-8">
+              <!-- <label for="nickname" class="form-label fw-bold">會員帳號</label> -->
+              <input type="text" class="form-control rounded-4 border-primary-dark border-2 fz-14 py-4 px-5 mb-6"
+                id="nickname" placeholder="使用者暱稱" required="" />
+              <!-- <label for="account" class="form-label fw-bold">會員帳號</label> -->
+              <input type="text" class="form-control rounded-4 border-primary-dark border-2 fz-14 py-4 px-5 mb-6"
+                id="account" placeholder="帳戶" required="" />
+              <div class="position-relative">
+                <!-- <label for="password" class="form-label fw-bold">密碼</label> -->
+                <input type="password" class="form-control rounded-4 border-primary-dark border-2 fz-14 py-4 px-5 mb-6"
+                  id="password" placeholder="密碼" required="" />
+                <button type="button"
+                  class="btn btn-transparent position-absolute top-50 translate-middle-y end-0 me-2">
+                  <i class="bi bi-eye fs-4 text-text-tertiary"></i>
+                </button>
+              </div>
+              <button type="submit" class="btn btn-primary-dark rounded-4 w-100 fs-5 py-2"
+                style="box-shadow: 0px 2px 0px 0px #d9c5a5">
+                建立新帳號
+              </button>
+            </div>
+          </form>
+
+          <div class="other-way mx-8 mt-10 border-top border-primary-dark">
+            <p class="text-center text-gray-300 fs-4 fw-semibold py-3">
+              使用第三方帳號註冊
+            </p>
+            <div class="login-platform d-flex justify-content-center gap-5 mt-2 mb-6">
+              <a href="#" class="btn btn-gray-100 fs-6 border-cta-secondary border-2 rounded-4">
+                <i class="bi bi-apple"></i>
+              </a>
+              <a href="#" class="btn btn-gray-100 fs-6 border-cta-secondary border-2 rounded-4">
+                <i class="bi bi-google"></i>
+              </a>
+              <a href="#" class="btn btn-gray-100 fs-6 border-cta-secondary border-2 rounded-4">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center pb-18">
-          <span class="fw-semibold fs-4 text-center"
-            >已有帳戶?<a
-              href="register.html"
-              class="text-decoration-underline fw-semibold link-rock-blue ms-2"
-              >登入</a
-            ></span
-          >
+
+          <p class="fs-4 text-center fw-semibold">
+            已有帳戶?
+            <a href="login.html" class="text-decoration-underline fw-semibold link-rock-blue ms-2">
+              登入
+            </a>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- <%- include('./layout/footer'); -%> -->
-
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </body>
+</body>
+
 </html>

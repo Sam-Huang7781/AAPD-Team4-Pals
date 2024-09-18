@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>homepage</title>
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
+
+    <!-- meditate-count 冥想倒數頁 -->
+    <section class="meditate-count bg-primary-light">
+      <div class="container pb-18">
+        <div class="diologue d-flex flex-column align-items-center pt-10">
+          <h3 class="fs-5 bg-white text-black py-5 px-7 rounded-pill">
+            完成了一次很棒的冥想呢！
+          </h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28" fill="none" class="mt-n2">
+            <path
+              d="M19.4641 26C17.9245 28.6667 14.0755 28.6667 12.5359 26L1.27757 6.5C-0.262028 3.83334 1.66247 0.5 4.74167 0.5L27.2583 0.5C30.3375 0.5 32.262 3.83333 30.7224 6.5L19.4641 26Z"
+              fill="white" />
+          </svg>
+        </div>
+
+        <div class="meditate-progress d-flex justify-content-center py-8 mb-6 position-relative">
+          <div id="static-progress-circle" style="width: 288px"></div>
+          <!-- <img src="../assets/images/meditateCount/dolls-meditiating_YL_Y.png"
+            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls_meditiating_Y" /> -->
+          <img src="/assets/images/meditateCount/dolls-meditiating_Y.svg"
+            class="position-absolute top-50 start-50 translate-middle z-1" alt="dolls_meditiating_Y">
+          <img src="/assets/images/meditateCount/aurora_yellowlight.png"
+            class="position-absolute top-50 start-50 translate-middle" alt="aurora_yellowlight">
+        </div>
+
+        <div class="text-center text-text-secondary">
+          <h4 class="fs-5 fw-bold pt-6">您已經冥想了</h4>
+          <time datetime="05:00" class="d-block fs-10 fw-bold mx-6 my-2" id="countdown"
+            style="letter-spacing: 4.8px">05:00</time>
+          <a href="./choose-moodToday.html">
+            <i class="bi bi-arrow-right fs-10 text-text-secondary"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../node_modules/progressbar.js/dist/progressbar.min.js"></script>
+    <script>
+      var bar = new ProgressBar.Circle("#static-progress-circle", {
+        strokeWidth: 4,
+        color: "#ffcc00",
+        trailColor: "#eee",
+        trailWidth: 4,
+        svgStyle: null,
+        duration: 0, // 設置動畫持續時間為 0
+      });
+
+      // 直接設置進度為 1.0 (100%)，不使用 animate 方法
+      bar.set(1.0);
+    </script>
+</body>
+
+</html>
