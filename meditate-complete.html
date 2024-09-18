@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>homepage</title>
+  <script type="module" crossorigin src="/AAPD-Team4-Pals/assets/meditate-complete-551d0c4f.js"></script>
+  <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/main-448b7643.js">
+  <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/progressbar.min-b6ae59e6.js">
+  <link rel="stylesheet" href="/AAPD-Team4-Pals/assets/main-c4b32e5c.css">
+</head>
+
+<body>
+  <header class="bg-mustard-300">
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="./index.html" class="nav-link link-primary-dark">首頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./meditate-count.html" class="nav-link link-primary-dark">冥想倒數 / 進行頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./meditate-complete.html" class="nav-link link-primary-dark">冥想完成頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./calendar.html" class="nav-link link-primary-dark">月曆頁 / 統計頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./settings.html" class="nav-link link-primary-dark">設定頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link link-primary-dark">歡迎頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link link-primary-dark">使用選擇頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./register.html" class="nav-link link-primary-dark">註冊頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./login.html" class="nav-link link-primary-dark">登入頁</a>
+    </li>
+  </ul>
+</header>
+
+    <!-- meditate-count 冥想倒數頁 -->
+    <section class="meditate-count bg-primary-light">
+      <div class="container pb-18">
+        <div class="diologue d-flex flex-column align-items-center pt-10">
+          <h3 class="fs-5 bg-white text-black py-5 px-7 rounded-pill">
+            完成了一次很棒的冥想呢！
+          </h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28" fill="none" class="mt-n2">
+            <path
+              d="M19.4641 26C17.9245 28.6667 14.0755 28.6667 12.5359 26L1.27757 6.5C-0.262028 3.83334 1.66247 0.5 4.74167 0.5L27.2583 0.5C30.3375 0.5 32.262 3.83333 30.7224 6.5L19.4641 26Z"
+              fill="white" />
+          </svg>
+        </div>
+
+        <div class="meditate-progress d-flex justify-content-center py-8 mb-6 position-relative">
+          <div id="static-progress-circle" style="width: 288px"></div>
+          <!-- <img src="../assets/images/meditateCount/dolls-meditiating_YL_Y.png"
+            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls_meditiating_Y" /> -->
+          <img src="/AAPD-Team4-Pals/assets/dolls-meditiating_Y-2512680a.svg"
+            class="position-absolute top-50 start-50 translate-middle z-1" alt="dolls_meditiating_Y">
+          <img src="/AAPD-Team4-Pals/assets/aurora_yellowlight-ae143be1.png"
+            class="position-absolute top-50 start-50 translate-middle" alt="aurora_yellowlight">
+        </div>
+
+        <div class="text-center text-text-secondary">
+          <h4 class="fs-5 fw-bold pt-6">您已經冥想了</h4>
+          <time datetime="05:00" class="d-block fs-10 fw-bold mx-6 my-2" id="countdown"
+            style="letter-spacing: 4.8px">05:00</time>
+          <a href="./choose-moodToday.html">
+            <i class="bi bi-arrow-right fs-10 text-text-secondary"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    
+</body>
+
+</html>

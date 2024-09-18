@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>homepage</title>
+  <script type="module" crossorigin src="/AAPD-Team4-Pals/assets/cheer-up-6faae8b3.js"></script>
+  <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/main-448b7643.js">
+  <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/progressbar.min-b6ae59e6.js">
+  <link rel="stylesheet" href="/AAPD-Team4-Pals/assets/main-c4b32e5c.css">
+</head>
+
+<body>
+  <header class="bg-mustard-300">
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="./index.html" class="nav-link link-primary-dark">首頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./meditate-count.html" class="nav-link link-primary-dark">冥想倒數 / 進行頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./meditate-complete.html" class="nav-link link-primary-dark">冥想完成頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./calendar.html" class="nav-link link-primary-dark">月曆頁 / 統計頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./settings.html" class="nav-link link-primary-dark">設定頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link link-primary-dark">歡迎頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link link-primary-dark">使用選擇頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./register.html" class="nav-link link-primary-dark">註冊頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./login.html" class="nav-link link-primary-dark">登入頁</a>
+    </li>
+  </ul>
+</header>
+
+    <section
+      class="cheer-up bg-primary-light d-flex flex-column justify-content-center align-items-center position-relative">
+      <section class="position-absolute w-100 h-100 z-2"
+        style="background: rgba(60, 60, 60, 0.9); transition: opacity 1s ease, visibility 0s 1s;">
+      </section>
+
+      <div class="modal d-block show position-absolute" id="cheer-up-Modal" tabindex="-1"
+        aria-labelledby="cheer-up-ModalLabel" aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
+          <div class="modal-content bg-primary-light rounded-4">
+            <div class="modal-header d-flex flex-column position-relative pb-6">
+              <h5 class="modal-title position-absolute fs-5 my-1" id="exampleModalLabel">
+                相信你自己！
+              </h5>
+              <a type="button" class="btn-close" href="./calendar.html"></a>
+            </div>
+            <div class="modal-body d-flex flex-column p-6">
+              <img src="/AAPD-Team4-Pals/assets/mood_laugh_Y_224x200-00e295de.png" alt="" />
+              <h4 class="fs-4 mb-6">
+                每一步都是向前的努力，堅持下去，你會看到成功的果實。
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pb-16">
+        <!-- meditate-programming 冥想進行頁 -->
+        <div class="diologue d-flex flex-column align-items-center pt-10">
+          <h3 class="fs-5 bg-white text-black py-5 px-7 rounded-pill">
+            完成了一次很棒的冥想呢！
+          </h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28" fill="none" class="mt-n2">
+            <path
+              d="M19.4641 26C17.9245 28.6667 14.0755 28.6667 12.5359 26L1.27757 6.5C-0.262028 3.83334 1.66247 0.5 4.74167 0.5L27.2583 0.5C30.3375 0.5 32.262 3.83333 30.7224 6.5L19.4641 26Z"
+              fill="white" />
+          </svg>
+        </div>
+
+        <div class="meditate-progress d-flex justify-content-center py-8 mb-6 position-relative">
+          <div id="static-progress-circle" style="width: 288px"></div>
+          <img src="/AAPD-Team4-Pals/assets/VectorLeft-668bdc83.svg" class="position-absolute end-0 top-50 me-4 mt-8"
+            style="transform: scaleX(-1)" alt="VectorLeft" />
+          <!-- <img src="../assets/images/meditateCount/dolls-meditiating_YL_Y.png"
+            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls-meditiating_YL_Y" /> -->
+          <img src="/AAPD-Team4-Pals/assets/dolls-meditiating_Y-2512680a.svg"
+            class="position-absolute top-50 start-50 translate-middle z-1" alt="dolls_meditiating_Y">
+          <img src="/AAPD-Team4-Pals/assets/aurora_yellowlight-ae143be1.png"
+            class="position-absolute top-50 start-50 translate-middle" alt="aurora_yellowlight">
+          <img src="/AAPD-Team4-Pals/assets/VectorLeft-668bdc83.svg" class="position-absolute start-0 top-50 ms-4 mt-8"
+            alt="VectorLeft" />
+        </div>
+
+        <div class="text-center text-text-secondary">
+          <h4 class="fs-5 fw-bold pt-6">您已經冥想了</h4>
+          <time datetime="05:00" class="d-block fs-10 fw-bold mx-6 my-2" id="countdown"
+            style="letter-spacing: 4.8px">05:00</time>
+          <button type="button" class="btn btn-transparent">
+            <img src="data:image/png;base64,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" alt="play icon">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <a href="#" class="d-flex flex-column align-items-center py-2 px-13 fw-bold fz-12 text-dune-100">
+          <i class="bi bi-house-door-fill fs-5"></i>
+          首頁
+        </a>
+        <a href="#" class="d-flex flex-column align-items-center py-2 px-13 fw-bold fz-12">
+          <i class="bi bi-person-fill fs-5"></i>
+          我的
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      
+      
+</body>
+
+</html>
