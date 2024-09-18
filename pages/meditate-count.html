@@ -50,8 +50,9 @@
           <button type="button" class="btn btn-transparent">
             <img src="/assets/images/meditateCount/back.svg" alt="backward icon" />
           </button>
-          <button type="button" class="btn btn-transparent">
-            <img src="/assets/images/meditateCount/PlayButton_80.png" id="start-meditation" alt="play icon" />
+          <button type="button" class="btn btn-transparent" id="start-meditation">
+            <img src="/assets/images/meditateCount/PlayButton_80.png" alt="play icon" class="play-icon" />
+            <img src="/assets/images/meditateCount/StopButton_80.png" alt="pause icon" class="pause-icon d-none" />
           </button>
           <button type="button" class="btn btn-transparent">
             <img src="/assets/images/meditateCount/forth.svg" alt="forward icon" />
@@ -60,10 +61,11 @@
       </div>
     </section>
 
-    <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../node_modules/progressbar.js/dist/progressbar.min.js"></script>
-    <script>
+    <script type="module" src="../main.js"></script>
+    <script type="module">
+      import ProgressBar from 'progressbar.js/dist/progressbar.min.js';
+
       var bar = new ProgressBar.Circle("#progress-circle", {
         strokeWidth: 4,
         easing: "easeInOut",
@@ -88,7 +90,12 @@
           var count = 3;
 
           // 更換 icon
-          startMeditation.setAttribute('src', '/assets/images/meditateCount/StopButton_80.png');
+          startMeditation
+            .querySelector('.play-icon')
+            .classList.add('d-none');
+          startMeditation
+            .querySelector('.pause-icon')
+            .classList.remove('d-none');
 
           // 立即更新倒數數字並顯示倒數頁
           countdownNumber.textContent = count;
