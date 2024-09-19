@@ -1,26 +1,31 @@
 .directly-doll {
   position: absolute;
   height: auto;
+  animation: floatUpDown 3s ease-in-out infinite;
 }
 
 .directly-doll-1 {
   top: 0;
   left: 0;
+  animation-delay: 2s;
 }
 
 .directly-doll-2 {
   top: 30px;
   right: 0;
+  animation-delay: 1s;
 }
 
 .directly-doll-3 {
   top: 70px;
   left: 120px;
+  animation-delay: 1.5s;
 }
 
 .directly-doll-4 {
   top: 160px;
   left: 0;
+  animation-delay: 0.5s;
 }
 
 .directly-doll-5 {
@@ -46,6 +51,16 @@
     border-color: #007bff; /* Change border color */
     position: relative;
   }
+}
 
-
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0); /* Start at original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Return to original position */
+  }
 }
