@@ -1,0 +1,44 @@
+.welcome-doll {
+  animation: floatUp 0.8s ease forwards;
+}
+
+.welcome-doll-1 {
+  position: relative; /* 保證絕對定位的子元素相對於這個容器 */
+  z-index: 8;
+}
+
+.welcome-doll-2 {
+  position: absolute;
+  animation-duration: 1.2s;
+  z-index: 2;
+}
+
+.welcome-doll-3 {
+  position: absolute;
+  animation-duration: 1.2s;
+  z-index: 2;
+}
+
+.welcome-doll-4 {
+  position: absolute;
+  animation-duration: 1s;
+  z-index: 4;
+}
+
+.welcome-doll-5 {
+  position: absolute;
+  animation-duration: 1s;
+  z-index: 6;
+}
+
+/* 定義娃娃浮上來的動畫 */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

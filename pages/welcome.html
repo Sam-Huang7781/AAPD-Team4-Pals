@@ -24,6 +24,7 @@
             font-family: 'dongle';
             font-size: 110px;
             letter-spacing: -2.2px;
+            line-height: 100%; /* 110px */
             padding-top: 144px;
             padding-bottom: 90px;
           "
@@ -31,83 +32,38 @@
           Pals
         </h1>
         <div
-          class="dolls-container position-relative"
+          class="welcome-dolls-container position-relative"
           style="padding-top: 140px; margin: 0 -12px"
         >
           <img
             src="/assets/images/welcome/Mindfulness-S5.png"
-            alt="doll-1"
-            class="doll doll-1 end-0"
+            alt="welcome-doll-1"
+            class="welcome-doll welcome-doll-1 end-0"
           />
           <img
             src="/assets/images/welcome/Concentration-S5.png"
-            alt="doll-2"
-            class="doll doll-2 top-0 end-0"
+            alt="welcome-doll-2"
+            class="welcome-doll welcome-doll-2 top-0 end-0"
           />
           <img
             src="/assets/images/welcome/Walking-S5.png"
-            alt="doll-3"
-            class="doll doll-3 top-0 end-50 me-8"
+            alt="welcome-doll-3"
+            class="welcome-doll welcome-doll-3 top-0 end-50 me-8"
           />
           <img
             src="/assets/images/welcome/Yoga-S5.png"
-            alt="doll-4"
-            class="doll doll-4 top-0 start-0 ms-21 mt-n4"
+            alt="welcome-doll-4"
+            class="welcome-doll welcome-doll-4 top-0 start-0 ms-21 mt-n4"
           />
           <img
             src="/assets/images/welcome/Zazen-S5.png"
-            alt="doll-5"
-            class="doll doll-5 top-0 start-0 mt-13"
+            alt="welcome-doll-5"
+            class="welcome-doll welcome-doll-5 top-0 start-0 mt-13"
           />
         </div>
       </div>
     </div>
-    <style>
-      .doll {
-        animation: floatUp 0.8s ease forwards; 
-      }
 
-      .doll-1 {
-        position: relative; /* 保證絕對定位的子元素相對於這個容器 */
-        z-index: 8;
-      }
-
-      .doll-2 {
-        position: absolute;
-        animation-duration: 1.2s;
-        z-index: 2;
-      }
-
-      .doll-3 {
-        position: absolute;
-        animation-duration: 1.2s;
-        z-index: 2;
-      }
-
-      .doll-4 {
-        position: absolute;
-        animation-duration: 1s;
-        z-index: 4;
-      }
-
-      .doll-5 {
-        position: absolute;
-        animation-duration: 1s;
-        z-index: 6;
-      }
-
-      /* 定義娃娃浮上來的動畫 */
-      @keyframes floatUp {
-        0% {
-          transform: translateY(100%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-    </style>
     <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>

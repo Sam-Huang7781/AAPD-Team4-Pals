@@ -1,0 +1,51 @@
+.directly-doll {
+  position: absolute;
+  height: auto;
+}
+
+.directly-doll-1 {
+  top: 0;
+  left: 0;
+}
+
+.directly-doll-2 {
+  top: 30px;
+  right: 0;
+}
+
+.directly-doll-3 {
+  top: 70px;
+  left: 120px;
+}
+
+.directly-doll-4 {
+  top: 160px;
+  left: 0;
+}
+
+.directly-doll-5 {
+  top: 200px;
+  right: 10px;
+}
+.directly-form-check {
+  .form-check-input {
+    margin-top: 0;
+    margin-right: 8px;
+    border: 1px black solid;
+    background-color: #fef5ee;
+    border-radius: 2px;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .form-check-input:checked {
+    background-color: #007bff; /* Change background color when checked */
+    border-color: #007bff; /* Change border color */
+    position: relative;
+  }
+
+
+}
