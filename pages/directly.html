@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>homepage</title>
+  </head>
+
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <!-- login -->
+    <section class="login bg-primary-light">
+      <div class="container">
+        <div class="pt-5 pb-18">
+          <div
+            class="dolls-container position-relative"
+            style="padding-top: 360px"
+          >
+            <img
+              src="/assets/images/login/login_O_120x124.png"
+              alt=""
+              class="doll doll-1"
+              width="100"
+            />
+            <img
+              src="/assets/images/login/login_B_120x124.png"
+              alt=""
+              class="doll doll-2"
+              width="110"
+            />
+            <img
+              src="/assets/images/login/login_P_120x124.png"
+              alt=""
+              class="doll doll-3"
+              width="120"
+            />
+            <img
+              src="/assets/images/login/login_G_120x124.png"
+              alt=""
+              class="doll doll-4"
+              width="130"
+            />
+            <img
+              src="/assets/images/login/login_Y_120x124.png"
+              alt=""
+              class="doll doll-5"
+              width="140"
+            />
+          </div>
+
+          <div class="welcome-text text-center">
+            <h2
+              class="fw-bold fs-20"
+              style="
+                font-family: 'dongle';
+                font-size: 110px;
+                line-height: 100%; /* 110px */
+                letter-spacing: -2.2px;
+              "
+            >
+              Pals
+            </h2>
+            <h3 class="fw-bold fs-7">歡迎來到朋蓬</h3>
+          </div>
+
+          <form action="" class="user-login" novalidate="">
+            <div class="mt-15 mx-10">
+              <button
+                type="submit"
+                class="btn btn-primary-dark rounded-4 w-100 fs-5 py-2"
+                style="box-shadow: 0px 2px 0px 0px #d9c5a5"
+              >
+                建立新帳號
+              </button>
+              <button
+                type="submit"
+                class="btn btn-outline-cta-secondary fw-semibold rounded-4 w-100 fs-5 py-2 mt-4 border-2"
+              >
+                登入
+              </button>
+              <p class="text-center text-cta-secondary fs-4 my-3">立即體驗</p>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="checkbox-agreement"
+                  value=""
+                  required=""
+                  style="border: 1px black solid; background-color: #fef5ee"
+                />
+                <label
+                  for="flexCheckDefault"
+                  class="form-check-label fs-3"
+                  style="letter-spacing: 0.24px"
+                  >我已詳細閱讀並同意會員權益聲明及隱私權條款</label
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <style>
+      .doll {
+        position: absolute;
+        height: auto;
+      }
+
+      .doll-1 {
+        top: 0;
+        left: 0;
+      }
+
+      .doll-2 {
+        top: 30px;
+        right: 0;
+      }
+
+      .doll-3 {
+        top: 70px;
+        left: 120px;
+      }
+
+      .doll-4 {
+        top: 160px;
+        left: 0;
+      }
+
+      .doll-5 {
+        top: 200px;
+        right: 10px;
+      }
+    </style>
+    <script type="module" src="../main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

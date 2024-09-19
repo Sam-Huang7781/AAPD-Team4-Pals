@@ -23,7 +23,6 @@
           style="
             font-family: 'dongle';
             font-size: 110px;
-            line-height: 100%; /* 110px */
             letter-spacing: -2.2px;
             padding-top: 144px;
             padding-bottom: 90px;
@@ -65,12 +64,11 @@
     </div>
     <style>
       .doll {
-        animation: floatUp 0.8s ease forwards; /* 動畫 */
+        animation: floatUp 0.8s ease forwards; 
       }
 
-      /* 每個娃娃不同的動畫延遲 */
       .doll-1 {
-        position: relative;
+        position: relative; /* 保證絕對定位的子元素相對於這個容器 */
         z-index: 8;
       }
 
@@ -88,13 +86,13 @@
 
       .doll-4 {
         position: absolute;
-        animation-duration: 1.0s;
+        animation-duration: 1s;
         z-index: 4;
       }
 
       .doll-5 {
         position: absolute;
-        animation-duration: 1.0s;
+        animation-duration: 1s;
         z-index: 6;
       }
 
@@ -114,3 +112,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
+
+
