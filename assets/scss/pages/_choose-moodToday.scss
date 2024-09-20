@@ -21,27 +21,27 @@
     background: transparent; /* 移除滑塊背景色，保持背景透明 */
     position: absolute; /* 使用絕對定位，方便將滑塊定位在進度條上 */
     transform: rotate(-90deg) translateX(-50%); /* 將滑塊旋轉 90 度以顯示為垂直狀態，同時橫向平移確保位置正確 */
-    top: -12px; 
-    left: -53px; 
-    z-index: 10; 
+    top: -12px;
+    left: -53px;
+    z-index: 10;
   }
-  
+
   .slider::-webkit-slider-thumb {
     -webkit-appearance: inherit; /* 移除拉軸按鈕的預設樣式，允許自定義樣式 */
     transform: rotate(90deg); /* 將按鈕旋轉 90 度，與滑塊的垂直方向一致 */
     width: 40px; /* 設定拉軸按鈕的寬度 */
     height: 40px; /* 設定拉軸按鈕的高度 */
-    background: url("../assets/images/meditateComplete/level_btn_40.png") no-repeat center center; 
-    background-size: contain; 
-    cursor: pointer; 
+    background: url('/assets/images/meditateComplete/level_btn_40.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
   }
-  
+
   .slider::-moz-range-thumb {
     -webkit-appearance: inherit; /* 在 Firefox 中移除拉軸按鈕的預設樣式 */
     width: 40px; /* 設定 Firefox 下拉軸按鈕的寬度 */
     height: 40px; /* 設定 Firefox 下拉軸按鈕的高度 */
-    background: url("../assets/images/meditateComplete/level_btn_40.png") no-repeat center center;
-    background-size: contain; 
-    cursor: pointer; 
+    background: url('/assets/images/meditateComplete/level_btn_40.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
   }
 }

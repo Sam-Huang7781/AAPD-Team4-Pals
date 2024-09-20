@@ -36,7 +36,7 @@
         <div class="text-text-tertiary text-center">
           <h4 class="fs-5">您已經冥想了</h4>
           <time datetime="00:37" class="d-block fs-10 fw-bold mx-6 my-2" id="timer"
-            style="letter-spacing: 4.8px">00:37</time>
+            style="letter-spacing: 4.8px">00:35</time>
         </div>
 
         <div class="ui-bottom d-flex align-items-center justify-content-center gap-12 py-3">
@@ -53,23 +53,24 @@
       </div>
     </section>
 
-    <script type="module" src="../main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../node_modules/progressbar.js/dist/progressbar.min.js"></script>
-    <script>
+    <script type="module" src="../main.js"></script>
+    <script type="module">
+      import ProgressBar from 'progressbar.js/dist/progressbar.min.js';
+
       var bar = new ProgressBar.Circle("#progress-circle", {
         strokeWidth: 4,
-        duration: 3000,
+        duration: 5000,
         color: "#ffcc00",
         trailColor: "#eee",
         trailWidth: 4,
         svgStyle: null,
       });
-      bar.animate(0.75); // 75% progress
+      bar.animate(0.1); // 75% progress
 
       // 計時器
-      let seconds = 38;
       const timerElement = document.getElementById("timer");
+      let seconds = 36;
 
       const updateTimer = () => {
         // 如果秒數到達40，停止遞增
@@ -88,11 +89,11 @@
       // 每秒更新一次秒數
       const timerInterval = setInterval(updateTimer, 1000);
 
-      // 在window load後3秒觸發跳轉事件
+      // 在 window load 後 5 秒觸發跳轉事件
       window.onload = function () {
         setTimeout(function () {
           window.location.href = "./meditate-complete.html"; // 跳轉目標頁面URL
-        }, 3000); // 3秒（3000毫秒）後跳轉
+        }, 5000); // 5 秒（5000 毫秒）後跳轉
       };
     </script>
 </body>
