@@ -9,14 +9,24 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <title>homepage</title>
-    <script type="module" crossorigin src="/AAPD-Team4-Pals/assets/main-448b7643.js"></script>
-    <link rel="stylesheet" href="/AAPD-Team4-Pals/assets/main-c4b32e5c.css">
+    <script type="module" crossorigin src="/AAPD-Team4-Pals/assets/main-30b21184.js"></script>
+    <link rel="stylesheet" href="/AAPD-Team4-Pals/assets/main-f2806a0b.css">
   </head>
+
   <body>
     <header class="bg-mustard-300">
   <ul class="nav">
     <li class="nav-item">
       <a href="./index.html" class="nav-link link-primary-dark">首頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./directly.html" class="nav-link link-primary-dark">選擇使用頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./register.html" class="nav-link link-primary-dark">註冊頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./login.html" class="nav-link link-primary-dark">登入頁</a>
     </li>
     <li class="nav-item">
       <a href="./meditate-count.html" class="nav-link link-primary-dark">冥想倒數 / 進行頁</a>
@@ -30,37 +40,56 @@
     <li class="nav-item">
       <a href="./settings.html" class="nav-link link-primary-dark">設定頁</a>
     </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link link-primary-dark">歡迎頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link link-primary-dark">使用選擇頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./register.html" class="nav-link link-primary-dark">註冊頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./login.html" class="nav-link link-primary-dark">登入頁</a>
-    </li>
   </ul>
 </header>
 
-    <!-- <footer class="bg-white">
-  <div class="d-flex justify-content-center align-items-center">
-    <div class="container">
-      <div class="d-flex justify-content-between">
-        <a href="#" class="d-flex flex-column align-items-center py-2 px-13 fw-bold fz-12 text-dune-100">
-          <i class="bi bi-house-door-fill fs-5"></i>
-          首頁
-        </a>
-        <a href="#" class="d-flex flex-column align-items-center py-2 px-13 fw-bold fz-12">
-          <i class="bi bi-person-fill fs-5"></i>
-          我的
-        </a>
+    <div class="bg-primary-light">
+      <div class="container">
+        <h1
+          class="fw-bold text-center"
+          style="
+            font-family: 'dongle';
+            font-size: 110px;
+            letter-spacing: -2.2px;
+            line-height: 100%; /* 110px */
+            padding-top: 144px;
+            padding-bottom: 90px;
+          "
+        >
+          Pals
+        </h1>
+        <div
+          class="welcome-dolls-container position-relative"
+          style="padding-top: 140px; margin: 0 -12px"
+        >
+          <img
+            src="/AAPD-Team4-Pals/assets/Mindfulness-S5-da83cdf7.png"
+            alt="welcome-doll-1"
+            class="welcome-doll welcome-doll-1 end-0"
+          />
+          <img
+            src="/AAPD-Team4-Pals/assets/Concentration-S5-61e46b97.png"
+            alt="welcome-doll-2"
+            class="welcome-doll welcome-doll-2 top-0 end-0"
+          />
+          <img
+            src="data:image/png;base64,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"
+            alt="welcome-doll-3"
+            class="welcome-doll welcome-doll-3 top-0 end-50 me-8"
+          />
+          <img
+            src="/AAPD-Team4-Pals/assets/Yoga-S5-b59aafd9.png"
+            alt="welcome-doll-4"
+            class="welcome-doll welcome-doll-4 top-0 start-0 ms-21 mt-n4"
+          />
+          <img
+            src="/AAPD-Team4-Pals/assets/Zazen-S5-f92c6006.png"
+            alt="welcome-doll-5"
+            class="welcome-doll welcome-doll-5 top-0 start-0 mt-13"
+          />
+        </div>
       </div>
     </div>
-  </div>
-</footer> -->
 
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
