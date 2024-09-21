@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>homepage</title>
+  </head>
+
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <section class="homepage bg-primary-light position-relative">
+      <div class="container pt-8 pb-16">
+        <h3 class="fs-7 fw-bold text-center mb-3">嗨， Monica！</h3>
+        <div class="d-flex align-items-center justify-content-center mb-6">
+          <i class="bi bi-clock-fill fz-4 me-1"></i>
+          <h4 class="fs-3">您今日已冥想 0 分鐘。</h4>
+        </div>
+        <div
+          class="swiper-calendar bg-white rounded-4 overflow-hidden py-3 mx-auto"
+          style="width: 308px"
+        >
+          <ul class="swiper-wrapper px-5 m-0">
+            <li class="swiper-slide">
+              <div class="day-item d-flex flex-column align-items-center">
+                <span class="day">SA</span>
+                <p class="date mb-1">20</p>
+                <img
+                  src="/assets/images/calendar-doll/mood-icon-3.svg"
+                  width="24"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="day-item d-flex flex-column align-items-center">
+                <span class="day">SU</span>
+                <p class="date mb-1">21</p>
+                <img
+                  src="/assets/images/calendar-doll/mood-icon-5.svg"
+                  width="24"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="day-item d-flex flex-column align-items-center">
+                <span class="day">MO</span>
+                <p class="date mb-1">22</p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="12" fill="#E4E2DD" />
+                </svg>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="day-item d-flex flex-column align-items-center">
+                <span class="day">TU</span>
+                <p class="date mb-1">23</p>
+                <img
+                  src="/assets/images/calendar-doll/mood-icon-1.svg"
+                  width="24"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="day-item d-flex flex-column align-items-center">
+                <span class="day">WE</span>
+                <p class="date mb-1">24</p>
+                <img
+                  src="/assets/images/calendar-doll/mood-icon-2.svg"
+                  width="24"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="day-item d-flex flex-column align-items-center">
+                <span class="day">TH</span>
+                <p class="date mb-1">25</p>
+                <img
+                  src="/assets/images/calendar-doll/mood-icon-4.svg"
+                  width="24"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="day-item d-flex flex-column align-items-center">
+                <span class="day">FR</span>
+                <p class="date mb-1">26</p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="12" fill="#E4E2DD" />
+                </svg>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="day-item d-flex flex-column align-items-center">
+                <span class="day">SA</span>
+                <p class="date mb-1">27</p>
+                <img
+                  src="/assets/images/calendar-doll/mood-icon-5.svg"
+                  width="24"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="day-item d-flex flex-column align-items-center">
+                <span class="day">SU</span>
+                <p class="date mb-1">28</p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="12" fill="#E4E2DD" />
+                </svg>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <h4 class="fs-4 fw-bold text-center mt-8 mb-3">正念冥想</h4>
+
+        <div
+          class="meditate-progress d-flex justify-content-center py-8 position-relative"
+        >
+          <div id="dynamic-progress-circle" style="width: 288px"></div>
+          <div id="progress-handle" class="handle"></div>
+          <div
+            class="swiper-doll w-100 h-100 position-absolute overflow-hidden z-1 top-0"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="/assets/images/meditateCount/dolls-meditiating_O.png"
+                  class="object-fit-none"
+                  alt="dolls_meditiating_O"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/assets/images/meditateCount/dolls-meditiating_Y.png"
+                  class="object-fit-none"
+                  alt="dolls_meditiating_Y"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/assets/images/meditateCount/dolls-meditiating_G.png"
+                  class="object-fit-none"
+                  alt="dolls_meditiating_G"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/assets/images/meditateCount/dolls-meditiating_P.png"
+                  class="object-fit-none"
+                  alt="dolls_meditiating_P"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="/assets/images/meditateCount/dolls-meditiating_B.png"
+                  class="object-fit-none"
+                  alt="dolls_meditiating_B"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <time
+            datetime="05:00"
+            class="d-block fs-10 fw-bold mx-6 mb-3"
+            id="countdown"
+            style="letter-spacing: 4.8px"
+            >05:00</time
+          >
+          <button
+            type="submit"
+            class="btn btn-primary-dark rounded-pill fs-5 py-2 px-22"
+            style="box-shadow: 0px 2px 0px 0px #d9c5a5"
+          >
+            開始冥想
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <%- include('./layout/footer'); -%>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="../main.js"></script>
+    <script type="module">
+      import ProgressBar from "progressbar.js/dist/progressbar.min.js";
+
+      var bar = new ProgressBar.Circle("#dynamic-progress-circle", {
+        strokeWidth: 4,
+        color: "#F0743E",
+        trailColor: "#fde7d7",
+        trailWidth: 4,
+        svgStyle: null,
+        duration: 0, // 設置動畫持續時間為 0
+      });
+
+      var progressCircle = document.getElementById("dynamic-progress-circle");
+      var handle = document.getElementById("progress-handle");
+      var radius = progressCircle.offsetWidth / 2;
+      var centerX = progressCircle.offsetLeft + radius;
+      var centerY = progressCircle.offsetTop + radius;
+
+      // 更新拉軸位置的函數
+      // 更新拉軸位置的函數
+      function updateHandle(progress) {
+        var angle = -Math.PI / 2 + 2 * Math.PI * progress; // 將起點設為上方 (-Math.PI / 2)
+        var x = centerX + radius * Math.cos(angle) - handle.offsetWidth / 2;
+        var y = centerY + radius * Math.sin(angle) - handle.offsetHeight / 2;
+
+        handle.style.left = x + "px";
+        handle.style.top = y + "px";
+      }
+
+      // 初始化拉軸位置
+      updateHandle(0.75); // 根據進度條設置初始位置
+
+      // 讓進度條連動拉軸
+      bar.animate(1, {
+        step: function (state, circle) {
+          updateHandle(circle.value()); // 動態更新拉軸位置
+        },
+      });
+
+      // 實現拖動功能
+      var isDragging = false;
+
+      handle.addEventListener("mousedown", function () {
+        isDragging = true;
+      });
+
+      document.addEventListener("mousemove", function (event) {
+        if (isDragging) {
+          var dx = event.clientX - centerX;
+          var dy = event.clientY - centerY;
+          var angle = Math.atan2(dy, dx) + Math.PI / 2; // 修正角度，使起點從上方開始
+          if (angle < 0) angle += 2 * Math.PI; // 確保角度為正數
+          var progress = angle / (2 * Math.PI); // 角度轉換為百分比
+          bar.set(progress); // 更新進度條
+          updateHandle(progress); // 更新拉軸位置
+        }
+      });
+
+      document.addEventListener("mouseup", function () {
+        isDragging = false;
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".swiper-calendar", {
+        slidesPerView: 7,
+        spaceBetween: 24,
+        initialSlide: 8,
+      });
+      var swiper2 = new Swiper(".swiper-doll", {
+        slidesPerView: 1,
+        spaceBetween: -140,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
