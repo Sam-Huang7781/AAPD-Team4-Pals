@@ -25,7 +25,7 @@
           class="swiper-calendar bg-white rounded-4 overflow-hidden py-3 mx-auto"
           style="width: 308px"
         >
-          <ul class="swiper-wrapper px-5 m-0">
+          <ul class="swiper-wrapper px-5 m-0 d-flex align-items-center">
             <li class="swiper-slide">
               <div class="day-item d-flex flex-column align-items-center">
                 <span class="day">SA</span>
@@ -110,8 +110,10 @@
                 />
               </div>
             </li>
-            <li class="swiper-slide">
-              <div class="day-item d-flex flex-column align-items-center">
+            <li class="swiper-slide bg-primary-dark rounded-pill px-4 py-1">
+              <div
+                class="day-item d-flex flex-column align-items-center text-white"
+              >
                 <span class="day">SU</span>
                 <p class="date mb-1">28</p>
                 <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -130,41 +132,41 @@
           <div id="dynamic-progress-circle" style="width: 288px"></div>
           <div id="progress-handle" class="handle"></div>
           <div
-            class="swiper-doll w-100 h-100 position-absolute overflow-hidden z-1 top-0"
+            class="swiper-doll w-100 position-absolute overflow-hidden z-1 top-50 start-50 translate-middle"
           >
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
-                  src="/assets/images/meditateCount/dolls-meditiating_O.png"
-                  class="object-fit-none"
+                  src="/assets/images/home/laugh.svg"
+                  class="mx-auto"
                   alt="dolls_meditiating_O"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="/assets/images/meditateCount/dolls-meditiating_Y.png"
-                  class="object-fit-none"
+                  src="/assets/images/home/laugh.svg"
+                  class="mx-auto"
                   alt="dolls_meditiating_Y"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="/assets/images/meditateCount/dolls-meditiating_G.png"
-                  class="object-fit-none"
+                  src="/assets/images/home/laugh.svg"
+                  class="mx-auto"
                   alt="dolls_meditiating_G"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="/assets/images/meditateCount/dolls-meditiating_P.png"
-                  class="object-fit-none"
+                  src="/assets/images/home/laugh.svg"
+                  class="mx-auto"
                   alt="dolls_meditiating_P"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="/assets/images/meditateCount/dolls-meditiating_B.png"
-                  class="object-fit-none"
+                  src="/assets/images/home/laugh.svg"
+                  class="mx-auto"
                   alt="dolls_meditiating_B"
                 />
               </div>
@@ -212,16 +214,37 @@
       var radius = progressCircle.offsetWidth / 2;
       var centerX = progressCircle.offsetLeft + radius;
       var centerY = progressCircle.offsetTop + radius;
+      var progressCircleRect = progressCircle.getBoundingClientRect();
+      var offsetX = progressCircleRect.left + window.scrollX;
+      var offsetY = progressCircleRect.top + window.scrollY;
 
-      // 更新拉軸位置的函數
+      var maxMinutes = 60; // 最大時間為60分鐘
+      var timeElement = document.getElementById("countdown");
+      var stepProgress = 5 / maxMinutes; // 每次增量為5分鐘，對應的進度增量
+
+      function updateTime(progress) {
+        var totalSeconds = maxMinutes * 60; // 將分鐘轉為秒
+        var remainingSeconds = Math.round(totalSeconds * (1 - progress)); // 計算剩餘時間
+        var minutes = Math.floor(remainingSeconds / 60);
+        var seconds = remainingSeconds % 60;
+
+        // 格式化時間顯示
+        timeElement.innerText = `${String(minutes).padStart(2, "0")}:${String(
+          seconds
+        ).padStart(2, "0")}`;
+      }
+
+      // 初始化時間顯示
+      updateTime(1); // 初始時間為60分鐘（0分鐘剩餘）
       // 更新拉軸位置的函數
       function updateHandle(progress) {
-        var angle = -Math.PI / 2 + 2 * Math.PI * progress; // 將起點設為上方 (-Math.PI / 2)
+        var angle = -Math.PI / 2 + 2 * Math.PI * progress;
         var x = centerX + radius * Math.cos(angle) - handle.offsetWidth / 2;
         var y = centerY + radius * Math.sin(angle) - handle.offsetHeight / 2;
 
         handle.style.left = x + "px";
         handle.style.top = y + "px";
+        updateTime(progress); // 更新時間
       }
 
       // 初始化拉軸位置
@@ -230,7 +253,7 @@
       // 讓進度條連動拉軸
       bar.animate(1, {
         step: function (state, circle) {
-          updateHandle(circle.value()); // 動態更新拉軸位置
+          updateHandle(circle.value());
         },
       });
 
@@ -243,13 +266,17 @@
 
       document.addEventListener("mousemove", function (event) {
         if (isDragging) {
-          var dx = event.clientX - centerX;
-          var dy = event.clientY - centerY;
-          var angle = Math.atan2(dy, dx) + Math.PI / 2; // 修正角度，使起點從上方開始
-          if (angle < 0) angle += 2 * Math.PI; // 確保角度為正數
-          var progress = angle / (2 * Math.PI); // 角度轉換為百分比
-          bar.set(progress); // 更新進度條
-          updateHandle(progress); // 更新拉軸位置
+          var dx = event.clientX - (offsetX + radius);
+          var dy = event.clientY - (offsetY + radius);
+          var angle = Math.atan2(dy, dx) + Math.PI / 2;
+          if (angle < 0) angle += 2 * Math.PI;
+
+          var progress = angle / (2 * Math.PI);
+          progress = Math.round(progress / stepProgress) * stepProgress; // 限制進度到最接近的5分鐘增量
+          progress = Math.min(Math.max(progress, 0), 1); // 限制進度在0到1之間
+
+          bar.set(progress);
+          updateHandle(progress);
         }
       });
 
@@ -266,7 +293,8 @@
       });
       var swiper2 = new Swiper(".swiper-doll", {
         slidesPerView: 1,
-        spaceBetween: -140,
+        spaceBetween: -160,
+        centeredSlides: true,
         loop: true,
       });
     </script>
