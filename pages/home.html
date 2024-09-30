@@ -1,416 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>homepage</title>
-  </head>
 
-  <body>
-    <%- include('./layout/header'); -%>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Pals｜朋蓬</title>
+</head>
 
-    <section class="homepage bg-primary-light position-relative">
-      <div class="container pt-8 pb-16">
-        <h3 class="fs-7 fw-bold text-center mb-3">嗨， Monica！</h3>
-        <div class="d-flex align-items-center justify-content-center mb-6">
-          <i class="bi bi-clock-fill fz-4 me-1"></i>
-          <h4 class="fs-3">您今日已冥想 0 分鐘。</h4>
-        </div>
-        <div
-          class="swiper-calendar swiper bg-white rounded-4 px-2 py-3 mx-auto"
-          style="width: 308px"
-        >
-          <ul class="swiper-wrapper p-0 mb-0">
-            <li class="swiper-slide px-1 py-2">
-              <div class="day-item d-flex flex-column align-items-center">
-                <span class="day">SA</span>
-                <p class="date mb-1">20</p>
-                <img
-                  src="/assets/images/calendar-doll/mood-icon-3.svg"
-                  width="24"
-                  alt="mood icon"
-                />
-              </div>
-            </li>
-            <li class="swiper-slide px-1 py-2">
-              <div class="day-item d-flex flex-column align-items-center">
-                <span class="day">SU</span>
-                <p class="date mb-1">21</p>
-                <img
-                  src="/assets/images/calendar-doll/mood-icon-5.svg"
-                  width="24"
-                  alt="mood icon"
-                />
-              </div>
-            </li>
-            <li class="swiper-slide px-1 py-2">
-              <div class="day-item d-flex flex-column align-items-center">
-                <span class="day">MO</span>
-                <p class="date mb-1">22</p>
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="12" fill="#E4E2DD" />
-                </svg>
-              </div>
-            </li>
-            <li class="swiper-slide px-1 py-2">
-              <div class="day-item d-flex flex-column align-items-center">
-                <span class="day">TU</span>
-                <p class="date mb-1">23</p>
-                <img
-                  src="/assets/images/calendar-doll/mood-icon-1.svg"
-                  width="24"
-                  alt="mood icon"
-                />
-              </div>
-            </li>
-            <li class="swiper-slide px-1 py-2">
-              <div class="day-item d-flex flex-column align-items-center">
-                <span class="day">WE</span>
-                <p class="date mb-1">24</p>
-                <img
-                  src="/assets/images/calendar-doll/mood-icon-2.svg"
-                  width="24"
-                  alt="mood icon"
-                />
-              </div>
-            </li>
-            <li class="swiper-slide px-1 py-2">
-              <div class="day-item d-flex flex-column align-items-center">
-                <span class="day">TH</span>
-                <p class="date mb-1">25</p>
-                <img
-                  src="/assets/images/calendar-doll/mood-icon-4.svg"
-                  width="24"
-                  alt="mood icon"
-                />
-              </div>
-            </li>
-            <li class="swiper-slide px-1 py-2">
-              <div class="day-item d-flex flex-column align-items-center">
-                <span class="day">FR</span>
-                <p class="date mb-1">26</p>
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="12" fill="#E4E2DD" />
-                </svg>
-              </div>
-            </li>
-            <li class="swiper-slide px-1 py-2">
-              <div class="day-item d-flex flex-column align-items-center">
-                <span class="day">SA</span>
-                <p class="date mb-1">27</p>
-                <img
-                  src="/assets/images/calendar-doll/mood-icon-5.svg"
-                  width="24"
-                  alt="mood icon"
-                />
-              </div>
-            </li>
-            <li class="swiper-slide px-1 py-2 bg-primary-dark rounded-pill">
-              <div
-                class="day-item d-flex flex-column align-items-center text-white"
-              >
-                <span class="day">SU</span>
-                <p class="date mb-1">28</p>
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="12" fill="#E4E2DD" />
-                </svg>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <h4 class="fs-4 fw-bold text-center mt-8 mb-3">正念冥想</h4>
-
-        <div
-          class="meditate-progress d-flex justify-content-center py-8 position-relative"
-        >
-          <div id="dynamic-progress-circle" style="width: 288px"></div>
-          <div id="progress-handle" class="handle"></div>
-          <div
-            class="swiper-doll w-100 position-absolute overflow-hidden z-1 top-50 start-50 translate-middle"
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide position-relative">
-                <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x" data-bs-toggle="modal"
-                data-bs-target="#Orange-Modal" style="top: -10px">
-                  <i class="bi bi-caret-down-fill"></i>
-                </button>
-                <img
-                  src="/assets/images/meditateCount/Concentration-O.svg"
-                  class="mx-auto"
-                  alt="dolls_meditiating_O"
-                  width="200"
-                />
-              </div>
-              <div class="swiper-slide position-relative">
-                <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x" data-bs-toggle="modal"
-                data-bs-target="#Yellow-Modal" style="top: -10px">
-                  <i class="bi bi-caret-down-fill"></i>
-                </button>
-                <img
-                  src="/assets/images/meditateCount/Mindfulness-Y.svg"
-                  class="mx-auto"
-                  alt="dolls_meditiating_Y"
-                  width="200"
-                />
-              </div>
-              <div class="swiper-slide position-relative">
-                <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x" data-bs-toggle="modal"
-                data-bs-target="#Green-Modal" style="top: -10px">
-                  <i class="bi bi-caret-down-fill"></i>
-                </button>
-                <img
-                  src="/assets/images/meditateCount/Yoga-G.svg"
-                  class="mx-auto"
-                  alt="dolls_meditiating_G"
-                  width="200"
-                />
-              </div>
-              <div class="swiper-slide position-relative">
-                <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x" data-bs-toggle="modal"
-                data-bs-target="#Purple-Modal" style="top: -10px">
-                  <i class="bi bi-caret-down-fill"></i>
-                </button>
-                <img
-                  src="/assets/images/meditateCount/Zazen-P.svg"
-                  class="mx-auto"
-                  alt="dolls_meditiating_P"
-                  width="200"
-                />
-              </div>
-              <div class="swiper-slide position-relative">
-                <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x" data-bs-toggle="modal"
-                data-bs-target="#Blue-Modal" style="top: -10px">
-                  <i class="bi bi-caret-down-fill"></i>
-                </button>
-                <img
-                  src="/assets/images/meditateCount/Walking-B.svg"
-                  class="mx-auto"
-                  alt="dolls_meditiating_B"
-                  width="200"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <time
-            datetime="05:00"
-            class="d-block fs-10 fw-bold mx-6 mb-3"
-            id="countdown"
-            style="letter-spacing: 4.8px"
-            >05:00</time
-          >
-          <a
-            type="submit"
-            class="btn btn-primary-dark rounded-pill fs-5 py-2 px-22"
-            style="box-shadow: 0px 2px 0px 0px #d9c5a5"
-            href="./meditate-count.html"
-          >
-            開始冥想
-          </a>
-        </div>
+<body>
+  <section class="homepage bg-primary-light position-relative">
+    <div class="container pt-8 pb-16">
+      <h3 class="fs-7 fw-bold text-center mb-3">嗨， Monica！</h3>
+      <div class="d-flex align-items-center justify-content-center mb-6">
+        <i class="bi bi-clock-fill fz-4 me-1"></i>
+        <h4 class="fs-3">您今日已冥想 0 分鐘。</h4>
       </div>
-      <div class="container">
-        <div
-          class="modal fade position-absolute"
-          id="Yellow-Modal"
-          tabindex="-1"
-          aria-labelledby="Yellow-ModalLabel"
-          aria-hidden="false"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered mx-auto"
-            style="width: 272px"
-          >
-            <div class="modal-content bg-primary-light rounded-4">
-              <div
-                class="modal-header d-flex flex-column position-relative border-0 pt-6"
-              >
-                <h5
-                  class="modal-title position-absolute fs-5 fw-bold mt-2"
-                  id="exampleModalLabel"
-                >
-                  正念冥想
-                </h5>
-                <a
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></a>
-              </div>
-              <div class="modal-body d-flex flex-column p-6 pt-0">
-                <img
-                  src="/assets/images/meditateCount/Mindfulness-Y.svg"
-                  alt="Mindfulness-Y"
-                />
-                <h4 class="fs-4 mb-6 text-center">當你需要 / 平靜情緒</h4>
-                <h4 class="fs-4 mb-6 text-center">音樂 / 海浪</h4>
-              </div>
+      <div class="swiper-calendar swiper bg-white rounded-4 px-2 py-3 mx-auto" style="width: 308px">
+        <ul class="swiper-wrapper p-0 mb-0">
+          <li class="swiper-slide px-1 py-2">
+            <div class="day-item d-flex flex-column align-items-center">
+              <span class="day">SA</span>
+              <p class="date mb-1">20</p>
+              <img src="/assets/images/calendar-doll/mood-icon-3.svg" width="24" alt="mood icon" />
             </div>
-          </div>
-        </div>
-        <div
-          class="modal fade position-absolute"
-          id="Orange-Modal"
-          tabindex="-1"
-          aria-labelledby="Orange-ModalLabel"
-          aria-hidden="false"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered mx-auto"
-            style="width: 272px"
-          >
-            <div class="modal-content bg-primary-light rounded-4">
-              <div
-                class="modal-header d-flex flex-column position-relative border-0 pt-6"
-              >
-                <h5
-                  class="modal-title position-absolute fs-5 fw-bold mt-2"
-                  id="exampleModalLabel"
-                >
-                  集中冥想
-                </h5>
-                <a
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></a>
-              </div>
-              <div class="modal-body d-flex flex-column p-6 pt-0">
-                <img
-                  src="/assets/images/meditateCount/Concentration-O.svg"
-                  alt="Concentration-O"
-                />
-                <h4 class="fs-4 mb-6 text-center">當你需要 / 鍛鍊專注</h4>
-                <h4 class="fs-4 mb-6 text-center">音樂 / 白噪音</h4>
-              </div>
+          </li>
+          <li class="swiper-slide px-1 py-2">
+            <div class="day-item d-flex flex-column align-items-center">
+              <span class="day">SU</span>
+              <p class="date mb-1">21</p>
+              <img src="/assets/images/calendar-doll/mood-icon-5.svg" width="24" alt="mood icon" />
             </div>
-          </div>
-        </div>
-        <div
-          class="modal fade position-absolute"
-          id="Green-Modal"
-          tabindex="-1"
-          aria-labelledby="Green-ModalLabel"
-          aria-hidden="false"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered mx-auto"
-            style="width: 272px"
-          >
-            <div class="modal-content bg-primary-light rounded-4">
-              <div
-                class="modal-header d-flex flex-column position-relative border-0 pt-6"
-              >
-                <h5
-                  class="modal-title position-absolute fs-5 fw-bold mt-2"
-                  id="exampleModalLabel"
-                >
-                  瑜珈冥想
-                </h5>
-                <a
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></a>
-              </div>
-              <div class="modal-body d-flex flex-column p-6 pt-0">
-                <img src="/assets/images/meditateCount/Yoga-G.svg" alt="Yoga-G" />
-                <h4 class="fs-4 mb-6 text-center">當你需要 / 連結身心</h4>
-                <h4 class="fs-4 mb-6 text-center">音樂 / 瑜珈旅程</h4>
-              </div>
+          </li>
+          <li class="swiper-slide px-1 py-2">
+            <div class="day-item d-flex flex-column align-items-center">
+              <span class="day">MO</span>
+              <p class="date mb-1">22</p>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#E4E2DD" />
+              </svg>
             </div>
-          </div>
-        </div>
-        <div
-          class="modal fade position-absolute"
-          id="Blue-Modal"
-          tabindex="-1"
-          aria-labelledby="Blue-ModalLabel"
-          aria-hidden="false"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered mx-auto"
-            style="width: 272px"
-          >
-            <div class="modal-content bg-primary-light rounded-4">
-              <div
-                class="modal-header d-flex flex-column position-relative border-0 pt-6"
-              >
-                <h5
-                  class="modal-title position-absolute fs-5 fw-bold mt-2"
-                  id="exampleModalLabel"
-                >
-                  行走冥想
-                </h5>
-                <a
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></a>
-              </div>
-              <div class="modal-body d-flex flex-column p-6 pt-0">
-                <img
-                  src="/assets/images/meditateCount/Walking-B.svg"
-                  alt="Walking-B"
-                />
-                <h4 class="fs-4 mb-6 text-center">當你需要 / 啟發感知</h4>
-                <h4 class="fs-4 mb-6 text-center">音樂 / 森林</h4>
-              </div>
+          </li>
+          <li class="swiper-slide px-1 py-2">
+            <div class="day-item d-flex flex-column align-items-center">
+              <span class="day">TU</span>
+              <p class="date mb-1">23</p>
+              <img src="/assets/images/calendar-doll/mood-icon-1.svg" width="24" alt="mood icon" />
             </div>
-          </div>
-        </div>
-        <div
-          class="modal fade position-absolute"
-          id="Purple-Modal"
-          tabindex="-1"
-          aria-labelledby="Purple-ModalLabel"
-          aria-hidden="false"
-        >
-          <div
-            class="modal-dialog modal-dialog-centered mx-auto"
-            style="width: 272px"
-          >
-            <div class="modal-content bg-primary-light rounded-4">
-              <div
-                class="modal-header d-flex flex-column position-relative border-0 pt-6"
-              >
-                <h5
-                  class="modal-title position-absolute fs-5 fw-bold mt-2"
-                  id="exampleModalLabel"
-                >
-                  禪修冥想
-                </h5>
-                <a
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></a>
-              </div>
-              <div class="modal-body d-flex flex-column p-6 pt-0">
-                <img src="/assets/images/meditateCount/Zazen-P.svg" alt="Zazen-P" />
-                <h4 class="fs-4 mb-6 text-center">當你需要 / 淨化心靈</h4>
-                <h4 class="fs-4 mb-6 text-center">音樂 / 頌缽療癒</h4>
-              </div>
+          </li>
+          <li class="swiper-slide px-1 py-2">
+            <div class="day-item d-flex flex-column align-items-center">
+              <span class="day">WE</span>
+              <p class="date mb-1">24</p>
+              <img src="/assets/images/calendar-doll/mood-icon-2.svg" width="24" alt="mood icon" />
+            </div>
+          </li>
+          <li class="swiper-slide px-1 py-2">
+            <div class="day-item d-flex flex-column align-items-center">
+              <span class="day">TH</span>
+              <p class="date mb-1">25</p>
+              <img src="/assets/images/calendar-doll/mood-icon-4.svg" width="24" alt="mood icon" />
+            </div>
+          </li>
+          <li class="swiper-slide px-1 py-2">
+            <div class="day-item d-flex flex-column align-items-center">
+              <span class="day">FR</span>
+              <p class="date mb-1">26</p>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#E4E2DD" />
+              </svg>
+            </div>
+          </li>
+          <li class="swiper-slide px-1 py-2">
+            <div class="day-item d-flex flex-column align-items-center">
+              <span class="day">SA</span>
+              <p class="date mb-1">27</p>
+              <img src="/assets/images/calendar-doll/mood-icon-5.svg" width="24" alt="mood icon" />
+            </div>
+          </li>
+          <li class="swiper-slide px-1 py-2 bg-primary-dark rounded-pill">
+            <div class="day-item d-flex flex-column align-items-center text-white">
+              <span class="day">SU</span>
+              <p class="date mb-1">28</p>
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="12" fill="#E4E2DD" />
+              </svg>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h4 class="fs-4 fw-bold text-center mt-8 mb-3">正念冥想</h4>
+
+      <div class="meditate-progress d-flex justify-content-center py-8 position-relative">
+        <div id="dynamic-progress-circle" style="width: 288px"></div>
+        <div id="progress-handle" class="handle"></div>
+        <div class="swiper-doll w-100 position-absolute overflow-hidden z-1 top-50 start-50 translate-middle">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide position-relative">
+              <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x"
+                data-bs-toggle="modal" data-bs-target="#Yellow-Modal" style="top: -10px">
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <img src="/assets/images/meditateCount/Mindfulness-Y.svg" class="mx-auto" alt="dolls_meditiating_Y"
+                width="200" />
+            </div>
+            <div class="swiper-slide position-relative">
+              <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x"
+                data-bs-toggle="modal" data-bs-target="#Orange-Modal" style="top: -10px">
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <img src="/assets/images/meditateCount/Concentration-O.svg" class="mx-auto" alt="dolls_meditiating_O"
+                width="200" />
+            </div>
+            <div class="swiper-slide position-relative">
+              <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x"
+                data-bs-toggle="modal" data-bs-target="#Green-Modal" style="top: -10px">
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <img src="/assets/images/meditateCount/Yoga-G.svg" class="mx-auto" alt="dolls_meditiating_G"
+                width="200" />
+            </div>
+            <div class="swiper-slide position-relative">
+              <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x"
+                data-bs-toggle="modal" data-bs-target="#Purple-Modal" style="top: -10px">
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <img src="/assets/images/meditateCount/Zazen-P.svg" class="mx-auto" alt="dolls_meditiating_P"
+                width="200" />
+            </div>
+            <div class="swiper-slide position-relative">
+              <button type="button" class="btn btn-transparent position-absolute start-50 translate-middle-x"
+                data-bs-toggle="modal" data-bs-target="#Blue-Modal" style="top: -10px">
+                <i class="bi bi-caret-down-fill"></i>
+              </button>
+              <img src="/assets/images/meditateCount/Walking-B.svg" class="mx-auto" alt="dolls_meditiating_B"
+                width="200" />
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <%- include('./layout/footer'); -%>
+      <div class="text-center">
+        <time datetime="05:00" class="d-block fs-10 fw-bold mx-6 mb-3" id="countdown"
+          style="letter-spacing: 4.8px">05:00</time>
+        <a type="submit" class="btn btn-primary-dark rounded-pill fs-5 py-2 px-22"
+          style="box-shadow: 0px 2px 0px 0px #d9c5a5" href="./meditate-count.html">
+          開始冥想
+        </a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="modal fade position-absolute" id="Yellow-Modal" tabindex="-1" aria-labelledby="Yellow-ModalLabel"
+        aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
+          <div class="modal-content bg-primary-light rounded-4">
+            <div class="modal-header d-flex flex-column position-relative border-0 pt-6">
+              <h5 class="modal-title position-absolute fs-5 fw-bold mt-2" id="exampleModalLabel">
+                正念冥想
+              </h5>
+              <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body d-flex flex-column p-6 pt-0">
+              <img src="/assets/images/meditateCount/Mindfulness-Y.svg" alt="Mindfulness-Y" />
+              <h4 class="fs-4 mb-6 text-center">當你需要 / 平靜情緒</h4>
+              <h4 class="fs-4 mb-6 text-center">音樂 / 海浪</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade position-absolute" id="Orange-Modal" tabindex="-1" aria-labelledby="Orange-ModalLabel"
+        aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
+          <div class="modal-content bg-primary-light rounded-4">
+            <div class="modal-header d-flex flex-column position-relative border-0 pt-6">
+              <h5 class="modal-title position-absolute fs-5 fw-bold mt-2" id="exampleModalLabel">
+                集中冥想
+              </h5>
+              <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body d-flex flex-column p-6 pt-0">
+              <img src="/assets/images/meditateCount/Concentration-O.svg" alt="Concentration-O" />
+              <h4 class="fs-4 mb-6 text-center">當你需要 / 鍛鍊專注</h4>
+              <h4 class="fs-4 mb-6 text-center">音樂 / 白噪音</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade position-absolute" id="Green-Modal" tabindex="-1" aria-labelledby="Green-ModalLabel"
+        aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
+          <div class="modal-content bg-primary-light rounded-4">
+            <div class="modal-header d-flex flex-column position-relative border-0 pt-6">
+              <h5 class="modal-title position-absolute fs-5 fw-bold mt-2" id="exampleModalLabel">
+                瑜珈冥想
+              </h5>
+              <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body d-flex flex-column p-6 pt-0">
+              <img src="/assets/images/meditateCount/Yoga-G.svg" alt="Yoga-G" />
+              <h4 class="fs-4 mb-6 text-center">當你需要 / 連結身心</h4>
+              <h4 class="fs-4 mb-6 text-center">音樂 / 瑜珈旅程</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade position-absolute" id="Blue-Modal" tabindex="-1" aria-labelledby="Blue-ModalLabel"
+        aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
+          <div class="modal-content bg-primary-light rounded-4">
+            <div class="modal-header d-flex flex-column position-relative border-0 pt-6">
+              <h5 class="modal-title position-absolute fs-5 fw-bold mt-2" id="exampleModalLabel">
+                行走冥想
+              </h5>
+              <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body d-flex flex-column p-6 pt-0">
+              <img src="/assets/images/meditateCount/Walking-B.svg" alt="Walking-B" />
+              <h4 class="fs-4 mb-6 text-center">當你需要 / 啟發感知</h4>
+              <h4 class="fs-4 mb-6 text-center">音樂 / 森林</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade position-absolute" id="Purple-Modal" tabindex="-1" aria-labelledby="Purple-ModalLabel"
+        aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
+          <div class="modal-content bg-primary-light rounded-4">
+            <div class="modal-header d-flex flex-column position-relative border-0 pt-6">
+              <h5 class="modal-title position-absolute fs-5 fw-bold mt-2" id="exampleModalLabel">
+                禪修冥想
+              </h5>
+              <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+            </div>
+            <div class="modal-body d-flex flex-column p-6 pt-0">
+              <img src="/assets/images/meditateCount/Zazen-P.svg" alt="Zazen-P" />
+              <h4 class="fs-4 mb-6 text-center">當你需要 / 淨化心靈</h4>
+              <h4 class="fs-4 mb-6 text-center">音樂 / 頌缽療癒</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('./layout/footer'); -%>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="../main.js"></script>
@@ -429,5 +264,6 @@
         loop: true,
       });
     </script>
-  </body>
+</body>
+
 </html>

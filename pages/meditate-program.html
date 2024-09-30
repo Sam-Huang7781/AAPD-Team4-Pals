@@ -1,147 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>homepage</title>
-  </head>
 
-  <body>
-    <%- include('./layout/header'); -%>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Pals｜朋蓬</title>
+</head>
 
-    <section class="meditate-program bg-primary-dark position-relative">
-      <!-- meditate-programming 冥想進行頁 -->
-      <div class="container pb-16">
-        <div
-          class="ui-top d-flex align-items-center justify-content-center gap-12 py-10"
-        >
-          <img
-            src="/assets/images/meditateCount/Close_48.svg"
-            alt="close icon"
-            width="48"
-          />
-          <h3 class="fs-5 text-white">正念冥想</h3>
-          <img
-            src="/assets/images/meditateCount/voice_48.svg"
-            alt="voice icon"
-            width="48"
-          />
-        </div>
-
-        <h4 class="meditate-instruction fs-5 text-white text-center">
-          深吸氣，數到四
-        </h4>
-
-        <div
-          class="meditate-progress d-flex justify-content-center py-8 mb-3 position-relative"
-        >
-          <div id="progress-circle" style="width: 288px"></div>
-          <img
-            src="/assets/images/meditateCount/Mindfulness-Y.svg"
-            class="position-absolute start-50 translate-middle z-1"
-            width="224"
-            alt="dolls_meditiating_Y"
-            style="bottom: -40px"
-          />
-          <img
-            src="/assets/images/meditateCount/Shadow.png"
-            class="position-absolute start-50 translate-middle z-1"
-            alt="shadow"
-            style="bottom: 54px"
-          />
-          <img
-            src="/assets/images/meditateCount/aurora.png"
-            class="position-absolute top-50 start-50 translate-middle"
-            alt="aurora"
-          />
-        </div>
-
-        <div class="text-text-tertiary text-center">
-          <h4 class="fs-5">您已經冥想了</h4>
-          <time
-            datetime="00:25"
-            class="d-block fs-10 fw-bold mx-6 my-2"
-            id="timer"
-            style="letter-spacing: 4.8px"
-            >00:25</time
-          >
-        </div>
-
-        <div
-          class="ui-bottom d-flex align-items-center justify-content-center gap-12 py-3"
-        >
-          <button type="button" class="btn p-0">
-            <img
-              src="/assets/images/meditateCount/back.svg"
-              alt="backward icon"
-            />
-          </button>
-          <button type="button" class="btn p-0">
-            <img
-              src="/assets/images/meditateCount/StopButton_80.svg"
-              id="start-meditation"
-              alt="stop icon"
-              width="80"
-            />
-          </button>
-          <button type="button" class="btn p-0">
-            <img
-              src="/assets/images/meditateCount/forth.svg"
-              alt="forward icon"
-            />
-          </button>
-        </div>
+<body>
+  <section class="meditate-program bg-primary-dark position-relative">
+    <!-- meditate-programming 冥想進行頁 -->
+    <div class="container pb-16">
+      <div class="ui-top d-flex align-items-center justify-content-center gap-12 py-10">
+        <img src="/assets/images/meditateCount/Close_48.svg" alt="close icon" width="48" />
+        <h3 class="fs-5 text-white">正念冥想</h3>
+        <img src="/assets/images/meditateCount/voice_48.svg" alt="voice icon" width="48" />
       </div>
-    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="../main.js"></script>
-    <script type="module">
-      import ProgressBar from "progressbar.js/dist/progressbar.min.js";
+      <h4 class="meditate-instruction fs-5 text-white text-center">
+        深吸氣，數到四
+      </h4>
 
-      var bar = new ProgressBar.Circle("#progress-circle", {
-        strokeWidth: 4,
-        duration: 5000,
-        color: "#ffcc00",
-        trailColor: "#eee",
-        trailWidth: 4,
-        svgStyle: null,
-      });
-      bar.set(0.4)
-      bar.animate(0.5); // 75% progress
+      <div class="meditate-progress d-flex justify-content-center py-8 mb-3 position-relative">
+        <div id="progress-circle" style="width: 288px"></div>
+        <img src="/assets/images/meditateCount/Mindfulness-Y.svg"
+          class="position-absolute start-50 translate-middle z-1" width="224" alt="dolls_meditiating_Y"
+          style="bottom: -40px" />
+        <img src="/assets/images/meditateCount/Shadow.png" class="position-absolute start-50 translate-middle z-1"
+          alt="shadow" style="bottom: 54px" />
+        <img src="/assets/images/meditateCount/aurora.png" class="position-absolute top-50 start-50 translate-middle"
+          alt="aurora" />
+      </div>
 
-      // 計時器
-      const timerElement = document.getElementById("timer");
-      let seconds = 26;
+      <div class="text-text-tertiary text-center">
+        <h4 class="fs-5">您已經冥想了</h4>
+        <time datetime="00:25" class="d-block fs-10 fw-bold mx-6 my-2" id="timer"
+          style="letter-spacing: 4.8px">00:25</time>
+      </div>
 
-      const updateTimer = () => {
-        // 如果秒數到達40，停止遞增
-        if (seconds >= 30) {
-          clearInterval(timerInterval);
-        }
+      <div class="ui-bottom d-flex align-items-center justify-content-center gap-12 py-3">
+        <button type="button" class="btn p-0">
+          <img src="/assets/images/meditateCount/back.svg" alt="backward icon" />
+        </button>
+        <button type="button" class="btn p-0">
+          <img src="/assets/images/meditateCount/StopButton_80.svg" id="start-meditation" alt="stop icon" width="80" />
+        </button>
+        <button type="button" class="btn p-0">
+          <img src="/assets/images/meditateCount/forth.svg" alt="forward icon" />
+        </button>
+      </div>
+    </div>
+  </section>
 
-        // 格式化成兩位數的時間表示
-        let formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
-        timerElement.textContent = `00:${formattedSeconds}`;
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="../main.js"></script>
+  <script type="module">
+    import ProgressBar from "progressbar.js/dist/progressbar.min.js";
 
-        // 增加秒數
-        seconds++;
-      };
+    var bar = new ProgressBar.Circle("#progress-circle", {
+      strokeWidth: 4,
+      duration: 5000,
+      color: "#ffcc00",
+      trailColor: "#eee",
+      trailWidth: 4,
+      svgStyle: null,
+    });
+    bar.set(0.4)
+    bar.animate(0.5); // 75% progress
 
-      // 每秒更新一次秒數
-      const timerInterval = setInterval(updateTimer, 1000);
+    // 計時器
+    const timerElement = document.getElementById("timer");
+    let seconds = 26;
 
-      // 在 window load 後 5 秒觸發跳轉事件
-      window.onload = function () {
-        setTimeout(function () {
-          window.location.href = "./meditate-complete.html"; // 跳轉目標頁面URL
-        }, 5000); // 5 秒（5000 毫秒）後跳轉
-      };
-    </script>
-  </body>
+    const updateTimer = () => {
+      // 如果秒數到達40，停止遞增
+      if (seconds >= 30) {
+        clearInterval(timerInterval);
+      }
+
+      // 格式化成兩位數的時間表示
+      let formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+      timerElement.textContent = `00:${formattedSeconds}`;
+
+      // 增加秒數
+      seconds++;
+    };
+
+    // 每秒更新一次秒數
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    // 在 window load 後 5 秒觸發跳轉事件
+    window.onload = function () {
+      setTimeout(function () {
+        window.location.href = "./meditate-complete.html"; // 跳轉目標頁面URL
+      }, 5000); // 5 秒（5000 毫秒）後跳轉
+    };
+  </script>
+</body>
+
 </html>

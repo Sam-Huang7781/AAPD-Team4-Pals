@@ -6,109 +6,107 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <title>homepage</title>
+  <title>Pals｜朋蓬</title>
 </head>
 
 <body>
-  <%- include('./layout/header'); -%>
+  <section
+    class="cheer-up bg-primary-light d-flex flex-column justify-content-center align-items-center position-relative">
+    <section class="position-absolute w-100 h-100 z-2"
+      style="background: rgba(60, 60, 60, 0.9); transition: opacity 1s ease, visibility 0s 1s;">
+    </section>
 
-    <section
-      class="cheer-up bg-primary-light d-flex flex-column justify-content-center align-items-center position-relative">
-      <section class="position-absolute w-100 h-100 z-2"
-        style="background: rgba(60, 60, 60, 0.9); transition: opacity 1s ease, visibility 0s 1s;">
-      </section>
-
-      <div class="modal d-block show position-absolute" id="cheer-up-Modal" tabindex="-1"
-        aria-labelledby="cheer-up-ModalLabel" aria-hidden="false">
-        <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
-          <div class="modal-content bg-primary-light rounded-4">
-            <div class="modal-header d-flex flex-column position-relative pb-6">
-              <h5 class="modal-title position-absolute fs-5 my-1" id="exampleModalLabel">
-                相信你自己！
-              </h5>
-              <a type="button" class="btn-close" href="./calendar.html"></a>
-            </div>
-            <div class="modal-body d-flex flex-column p-6">
-              <img src="../assets/images/meditateCount/Mindfulness-Y.svg" alt="" />
-              <h4 class="fs-4 mb-6">
-                每一步都是向前的努力，堅持下去，你會看到成功的果實。
-              </h4>
-            </div>
+    <div class="modal d-block show position-absolute" id="cheer-up-Modal" tabindex="-1"
+      aria-labelledby="cheer-up-ModalLabel" aria-hidden="false">
+      <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
+        <div class="modal-content bg-primary-light rounded-4">
+          <div class="modal-header d-flex flex-column position-relative pb-6">
+            <h5 class="modal-title position-absolute fs-5 my-1" id="exampleModalLabel">
+              相信你自己！
+            </h5>
+            <a type="button" class="btn-close" href="./calendar.html"></a>
+          </div>
+          <div class="modal-body d-flex flex-column p-6">
+            <img src="../assets/images/meditateCount/Mindfulness-Y.svg" alt="" />
+            <h4 class="fs-4 mb-6">
+              每一步都是向前的努力，堅持下去，你會看到成功的果實。
+            </h4>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="container pb-16">
-        <!-- meditate-programming 冥想進行頁 -->
-        <div class="diologue d-flex flex-column align-items-center pt-10">
-          <h3 class="fs-5 bg-white text-black py-5 px-7 rounded-pill">
-            完成了一次很棒的冥想呢！
-          </h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28" fill="none" class="mt-n2">
-            <path
-              d="M19.4641 26C17.9245 28.6667 14.0755 28.6667 12.5359 26L1.27757 6.5C-0.262028 3.83334 1.66247 0.5 4.74167 0.5L27.2583 0.5C30.3375 0.5 32.262 3.83333 30.7224 6.5L19.4641 26Z"
-              fill="white" />
-          </svg>
-        </div>
-
-        <div class="meditate-progress d-flex justify-content-center py-8 mb-6 position-relative">
-          <div id="static-progress-circle" style="width: 288px"></div>
-          <img src="../assets/images/meditateComplete/VectorLeft.svg" class="position-absolute end-0 top-50 me-4 mt-8"
-            style="transform: scaleX(-1)" alt="VectorLeft" />
-          <!-- <img src="../assets/images/meditateCount/dolls-meditiating_YL_Y.png"
-            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls-meditiating_YL_Y" /> -->
-          <img src="/assets/images/meditateCount/dolls-meditiating_Y.svg"
-            class="position-absolute top-50 start-50 translate-middle z-1" alt="dolls_meditiating_Y">
-          <img src="/assets/images/meditateCount/aurora_yellowlight.png"
-            class="position-absolute top-50 start-50 translate-middle" alt="aurora_yellowlight">
-          <img src="../assets/images/meditateComplete/VectorLeft.svg" class="position-absolute start-0 top-50 ms-4 mt-8"
-            alt="VectorLeft" />
-        </div>
-
-        <div class="text-center text-text-secondary">
-          <h4 class="fs-5 fw-bold pt-6">您已經冥想了</h4>
-          <time datetime="05:00" class="d-block fs-10 fw-bold mx-6 my-2" id="countdown"
-            style="letter-spacing: 4.8px">05:00</time>
-          <button type="button" class="btn btn-transparent">
-            <img src="/assets/images/meditateCount/PlayButton_80.png" alt="play icon">
-          </button>
-        </div>
+    <div class="container pb-16">
+      <!-- meditate-programming 冥想進行頁 -->
+      <div class="diologue d-flex flex-column align-items-center pt-10">
+        <h3 class="fs-5 bg-white text-black py-5 px-7 rounded-pill">
+          完成了一次很棒的冥想呢！
+        </h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28" fill="none" class="mt-n2">
+          <path
+            d="M19.4641 26C17.9245 28.6667 14.0755 28.6667 12.5359 26L1.27757 6.5C-0.262028 3.83334 1.66247 0.5 4.74167 0.5L27.2583 0.5C30.3375 0.5 32.262 3.83333 30.7224 6.5L19.4641 26Z"
+            fill="white" />
+        </svg>
       </div>
-    </section>
 
-    <%- include('./layout/footer'); -%>
+      <div class="meditate-progress d-flex justify-content-center py-8 mb-6 position-relative">
+        <div id="static-progress-circle" style="width: 288px"></div>
+        <img src="../assets/images/meditateComplete/VectorLeft.svg" class="position-absolute end-0 top-50 me-4 mt-8"
+          style="transform: scaleX(-1)" alt="VectorLeft" />
+        <!-- <img src="../assets/images/meditateCount/dolls-meditiating_YL_Y.png"
+            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls-meditiating_YL_Y" /> -->
+        <img src="/assets/images/meditateCount/dolls-meditiating_Y.svg"
+          class="position-absolute top-50 start-50 translate-middle z-1" alt="dolls_meditiating_Y">
+        <img src="/assets/images/meditateCount/aurora_yellowlight.png"
+          class="position-absolute top-50 start-50 translate-middle" alt="aurora_yellowlight">
+        <img src="../assets/images/meditateComplete/VectorLeft.svg" class="position-absolute start-0 top-50 ms-4 mt-8"
+          alt="VectorLeft" />
+      </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script type="module" src="../main.js"></script>
-      <script type="module">
-        import ProgressBar from 'progressbar.js/dist/progressbar.min.js';
+      <div class="text-center text-text-secondary">
+        <h4 class="fs-5 fw-bold pt-6">您已經冥想了</h4>
+        <time datetime="05:00" class="d-block fs-10 fw-bold mx-6 my-2" id="countdown"
+          style="letter-spacing: 4.8px">05:00</time>
+        <button type="button" class="btn btn-transparent">
+          <img src="/assets/images/meditateCount/PlayButton_80.png" alt="play icon">
+        </button>
+      </div>
+    </div>
+  </section>
 
-        var bar = new ProgressBar.Circle("#static-progress-circle", {
-          strokeWidth: 4,
-          color: "#ffcc00",
-          trailColor: "#eee",
-          trailWidth: 4,
-          svgStyle: null,
-          duration: 0, // 設置動畫持續時間為 0
-        });
-        // 直接設置進度為 1.0 (100%)，不使用 animate 方法
-        bar.set(1.0);
+  <%- include('./layout/footer'); -%>
 
-        // 監聽滑塊變動，動態更新進度條
-        var slider = document.getElementById("progress-slider");
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="../main.js"></script>
+    <script type="module">
+      import ProgressBar from 'progressbar.js/dist/progressbar.min.js';
 
-        slider.addEventListener("input", function () {
-          var value = slider.value; // 獲取滑塊的值（0~1之間的數字）
-          bar1.set(value); // 更新進度條
-        });
+      var bar = new ProgressBar.Circle("#static-progress-circle", {
+        strokeWidth: 4,
+        color: "#ffcc00",
+        trailColor: "#eee",
+        trailWidth: 4,
+        svgStyle: null,
+        duration: 0, // 設置動畫持續時間為 0
+      });
+      // 直接設置進度為 1.0 (100%)，不使用 animate 方法
+      bar.set(1.0);
 
-        var swiper = new Swiper(".mySwiper", {
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-      </script>
+      // 監聽滑塊變動，動態更新進度條
+      var slider = document.getElementById("progress-slider");
+
+      slider.addEventListener("input", function () {
+        var value = slider.value; // 獲取滑塊的值（0~1之間的數字）
+        bar1.set(value); // 更新進度條
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 </body>
 
 </html>
