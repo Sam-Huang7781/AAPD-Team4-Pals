@@ -31,7 +31,7 @@
     transform: rotate(90deg); /* 將按鈕旋轉 90 度，與滑塊的垂直方向一致 */
     width: 40px; /* 設定拉軸按鈕的寬度 */
     height: 40px; /* 設定拉軸按鈕的高度 */
-    background: url('/assets/images/meditateComplete/level_btn_40.png') no-repeat center center;
+    background: url('/assets/images/meditateComplete/level_btn_40.svg') no-repeat center center;
     background-size: contain;
     cursor: pointer;
   }
@@ -40,7 +40,7 @@
     -webkit-appearance: inherit; /* 在 Firefox 中移除拉軸按鈕的預設樣式 */
     width: 40px; /* 設定 Firefox 下拉軸按鈕的寬度 */
     height: 40px; /* 設定 Firefox 下拉軸按鈕的高度 */
-    background: url('/assets/images/meditateComplete/level_btn_40.png') no-repeat center center;
+    background: url('/assets/images/meditateComplete/level_btn_40.svg') no-repeat center center;
     background-size: contain;
     cursor: pointer;
   }
