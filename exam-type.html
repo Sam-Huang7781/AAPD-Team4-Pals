@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <title>homepage</title>
+  <script type="module" crossorigin src="/AAPD-Team4-Pals/assets/main-b94293ae.js"></script>
+  <link rel="stylesheet" href="/AAPD-Team4-Pals/assets/main-8115f5a2.css">
+</head>
+
+<body>
+  <header class="bg-mustard-300">
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="./index.html" class="nav-link link-primary-dark">首頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./directly.html" class="nav-link link-primary-dark">選擇使用頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./register.html" class="nav-link link-primary-dark">註冊頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./login.html" class="nav-link link-primary-dark">登入頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./meditate-count.html" class="nav-link link-primary-dark">冥想倒數 / 進行頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./meditate-complete.html" class="nav-link link-primary-dark">冥想完成頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./calendar.html" class="nav-link link-primary-dark">月曆頁 / 統計頁</a>
+    </li>
+    <li class="nav-item">
+      <a href="./settings.html" class="nav-link link-primary-dark">設定頁</a>
+    </li>
+  </ul>
+</header>
+
+    <section class="bg-primary-light">
+      <div class="container">
+        <div class="py-4">
+          <div class="progress bg-transparent gap-3" style="height: 4px;">
+            <div class="progress-bar rounded-pill" role="progressbar" style="width: 33.333%" aria-valuenow="33.333"
+              aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar rounded-pill" role="progressbar" style="width: 33.333%" aria-valuenow="66.666"
+              aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar rounded-pill bg-dune-100" role="progressbar" style="width: 33.334%"
+              aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="py-10">
+          <div class="d-flex align-items-center">
+            <img src="data:image/png;base64,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" alt="mindfulness doll">
+            <div>
+              <p>問題二</p>
+              <div class="diologue d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="currentColor"
+                  class="bi bi-caret-left-fill me-n2" viewBox="0 0 16 16">
+                  <path
+                    d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                </svg>
+                <h3 class="fs-5 bg-dark text-primary-light px-3 py-2 rounded-pill">
+                  今天想要...
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="w-75 px-2 mx-auto mb-4">
+            <button type="button" class="btn btn-outline-cta-secondary fw-bold rounded-4 w-100 fs-5 py-2 mb-6 border-2">
+              平靜情緒
+            </button>
+            <button type="button" class="btn btn-outline-cta-secondary fw-bold rounded-4 w-100 fs-5 py-2 mb-6 border-2">
+              鍛鍊專注
+            </button>
+            <button type="button" class="btn btn-outline-cta-secondary fw-bold rounded-4 w-100 fs-5 py-2 mb-6 border-2">
+              連結身心
+            </button>
+            <button type="button" class="btn btn-outline-cta-secondary fw-bold rounded-4 w-100 fs-5 py-2 mb-6 border-2">
+              睡前減壓
+            </button>
+            <button type="button" class="btn btn-outline-cta-secondary fw-bold rounded-4 w-100 fs-5 py-2 border-2">
+              休閒放空
+            </button>
+          </div>
+          <div class="w-75 mx-auto pt-10 text-center">
+            <a href="./exam-result.html" class="btn btn-primary-dark w-100 rounded-4 fs-5 mb-3"
+              style="box-shadow: 0px 2px 0px 0px #d9c5a5">
+              下一步
+            </a>
+            <a href="#" class="text-cta-secondary">略過</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
