@@ -6,94 +6,65 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <title>homepage</title>
+  <title>Pals｜朋蓬</title>
   <script type="module" crossorigin src="/AAPD-Team4-Pals/assets/main-b94293ae.js"></script>
   <link rel="stylesheet" href="/AAPD-Team4-Pals/assets/main-8115f5a2.css">
 </head>
 
 <body>
-  <header class="bg-mustard-300">
-  <ul class="nav">
-    <li class="nav-item">
-      <a href="./index.html" class="nav-link link-primary-dark">首頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./directly.html" class="nav-link link-primary-dark">選擇使用頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./register.html" class="nav-link link-primary-dark">註冊頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./login.html" class="nav-link link-primary-dark">登入頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./meditate-count.html" class="nav-link link-primary-dark">冥想倒數 / 進行頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./meditate-complete.html" class="nav-link link-primary-dark">冥想完成頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./calendar.html" class="nav-link link-primary-dark">月曆頁 / 統計頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./settings.html" class="nav-link link-primary-dark">設定頁</a>
-    </li>
-  </ul>
-</header>
+  <div class="bg-primary-light">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="container">
+        <ul class="nav justify-content-between align-items-center py-6 mb-4">
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-black" href="./calendar.html">
+              <i class="bi bi-arrow-left"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <p class="text-dune-600 fw-bold">個人資料設定</p>
+          </li>
+          <li class="nav-item">
+            <div class="placeholder"></div>
+          </li>
+        </ul>
 
-    <div class="bg-primary-light">
-      <div class="d-flex justify-content-center align-items-center">
-        <div class="container">
-          <ul class="nav justify-content-between align-items-center py-6 mb-4">
-            <li class="nav-item">
-              <a class="nav-link fs-6 text-black" href="./calendar.html">
-                <i class="bi bi-arrow-left"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <p class="text-dune-600 fw-bold">個人資料設定</p>
-            </li>
-            <li class="nav-item">
-              <div class="placeholder"></div>
-            </li>
-          </ul>
+        <div class="w-75 mx-auto">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAqvSURBVHgB7Z17bFtXHce/x68kTpo4Tdt17ZhcUUFaOpJSjVGYaLsxqa1gKyAhbRoj/EGlgap2GgiEQG1AAqFKLEECifHHWhDwbycNWiRGvfKo1qkkHaWttpa4KUvbNF2dpx+J79nvd69vYju+D9vXeVz7I51cP47P8f36d3/nd143AksIKWUnHfTUkjmGslI2sUyKZo4XKPXzcyFEP5YIAosICbqTDjso8VEX0wlYcBb5BKU3lpLgFYdFpdRD6Z5cOAYovZK5QtwHnViI0kFKp+Xi00fpa3ADUhP2sFxYa7XLgFzOQkvNYpeisPkMyOUktNR87Gm5/BigFMZSRWru4CW5/DkMB3EkTJPaL3+aUhjuIEppF4V3UZSJB2UiNf/VB/eIy4QpcbRxCIuJ1CIEt1OWyyjZRVDFr9ChC9VBD7mLF1ACJQlcZeLqHCORv44iKVrgKhVXp2iRi2rkSNyXUL3iMl0ZA7ONbYEzzn5xW9WlQVcxDZ8tF0EFHqRDD2pk00Xu4rhVJkuBpdaJ4DjXqbFat8BjzlutOiN2BB6AuzoRThKFJnLMKIPP5MO63w3DCZQEpQnI9Dgdk1w6+PcV/lY6BAFvExybYJFpqmMKSHN9o/Rc0cr21kF4m+lIF6PwwQHClFgjwxjZ8IwyrmEAJUMnOXkecuIcZOJdYOZ9eimmnXw+ngbtpOvCEA0fg2j+LP30q1AU0yOQ42cg4/8FUjeovrtUV2p+fcJL9TUC/rUQ9Rshmj4JND6MMn9cHreIFHrDTODSXMP0HSgxmgob+xud5ChKgq2rYTMJvYsE+DSJv6JwvpkY5FQ/5NjrwFRfxlJLgH5M0UQir/wKXVH3oQQiJPCuQm8UFJjE7aJDUfEeW4wcOU4n+y8qYAqOIeqAwDoSoW1OaHYzbKHTtzVX4BSeemDFo/Cs/obxj2rMCyTyvEjLSGD71ktWI8f/Djn8S9XnuQJyV6LtGYjWzxfzKW7oNuQ3ePM6GhnrDcMWEvLmTyFvHXWPuAy1FXL4V3RuR4u5QjiMndcRm2fBtq2XvoRy4/tAMgpXU98OzwPddl3GPCvOsWDb1ks+ULnxPfeLyySuQBn8jtqg2oCtuCv7hXwXcRBW0CWjvEehX3IQVUNqULta1djdkqeyn8wKLOfWhZkib1NjFr+CqiMVhTL0EzuhIM+q79SfZFuw5UiZjL1GYdhpOMn0tMTVwSSuDCQwPlliHJvFxFRaLevq9SQcZ/ysGjHZYJ/+IFvgHaYfIb8r7/4BThM5N4Enn7+GL37rf+j97TDKpfd3d9SynvzmNZx5y+nIRtHCUWXSKuPsQhZV4Ix7CJsWPfwbu46+KBJJ+tIZ15ZMlW/B8YRWBpc5FS+/vHlQOKoMv2yVK6S7CX3EY6dpdu4xTfwDleBzn1mB3W82Y/j9GTzzhZWmeVk8hYRrbDCeJ/jyEyEM/D+FDesDeKSzERVh4p9kbF+1Gi/ZCe5C8yNS+zRMRFZu9QKjf4FTKOMSyfNJKlfCe78HgW1+eJqsJ1f2/3BQjdxf/tGDlnnlJNXx7xTSQwq8q6iOh6mO5rKXgcwiWvdBrNlvlkUdn9AFvgfDAXUJ5dpzWt/fASSZYPxPCaRvz12+vnVeNOytt/zs2EQaCn0s1Oy1zDv1GtVxa24kzbvWg+DeBgeW2ugFNsOz8ff8wChHjARu9WT8r+FshZw855i4jBKjH+xubjw5M5SmYUbrGLO5yWtLXLbebHHVeqlOZcxBn5weo6HY82Y52A93sg8Om+UCjec6iaeBLho/PZjJfhHzhv451Pr1H0dw5940OtqD2LYliLYWH7xegZt3ptF3aQoXrsTxwFo/nn96NcLkc2epz5SXX0fA4R0Tk28CPJ5sjCqwaedCJq7CSQQJXPeQH4m3UmrHSPgFAp8IqEcdbswO/PgGOj4axGOfasbFd+L4BYVwsTHNKluaffjwhwJ4fPsKXLoax9MvRvH6sY0I1mvXv6AfoW5bAEmuQ+HhZaqjg3xw0FmBZfKa1TC9KnCHcQkzWgThMP4tdLLU8Cj3JI29euBdk+sY//NuXBXzyIH70RSce4/DLq+HxKubOy3Ot2f/VdWat2dFDQGqg8tNj9BnWqmOddaupWhoFkWdCvMYth8tLLDxbDFP8VgH1cVDmvEJe9cVfju8vo5iYknhVhIPfaRh9vVggfDsnesJteFji86Bp+Du86qpYvB8H80zmgjcyd84bFzAWOE5tAqzZqUPXV9qw4s/e0/tjXF3uhBn+yfx3aNDeOrxFqxp82PBYW3Mx8FDphYslQr0521y4NnVaF3hxQ96hrCq1ac2Zk1BzRonyVUM3kwiNp7Gc/va8KxFB6WSSHIRJn44JHgBrOGH45cgB7+NxeTWyDTeJv86eGta7VYzAWq01pPgj3y8URV/MREP/pwa7nbD9y2+nXM9n1JZu8qPtY8uwuXvEKYKCnWBRgUbCRcgfK2m75ubqDdIJQRQwwBeMOMJmmeBNlFn8G6jth6hRmH4CjefDI2ZC0zuQdRZj1xVK6Jug1UWC4GZ+s2oYUCDpTZRFviCWQ51IZ5Y/GhiySF8mjbmjFpbMI/aN7jzNgvlINh6rVeA9rPAlncDES1PoEYezY/ZydVnT+DGDstwpKoQdRBN2+3kvO7J3M/G3E1wOFLaull3wstprdeq8ZRRv956Wd80qBYPz+G3pYWqqS7wG1a5hafoBcmuxaYWr/IfXeAIajhNhP+oAmc2cJj6YXV3UA0Vab3YfPbmeNk9CPNdi2nnpu6XPTMjVjki+oNsgU8YZmfrTQ2hRgaeCDZfp9erP5gVOOMmIoVyy4mzPEeNGhmUKcgpwxGG/uxbOeYPMrxa6BOS97zVyGXsr0bv5Gzlyhf4GPIbO/Y3NDdXIxc52VfIF0fzd+DnCJzZHdObU9DYGW0BSo08FE2bXI7kv1BoHJJNfM6Ka9ZrTK420UL3j5gncMaKu/XnMlnGfnCXI1OD2QtzjhTKU3AkPbPnNqKu7Ek7v23ANfCyXm0naNTo7idmUxXdkHEqII4aBvDtErS1e7uMshgKzHGxMnGxFzWMIfegTL7dbXZbGdPlrbJvX0hpSLrtvpROEvW2nzSdWjZf2bP1RMwj5S5I1BxxPqSJqo0FltPFYtOpqIQs6b6NbiYt0M3aWOWzNR/v23TqmCJlN2qosBaB9pM9dvIWtWlh5vKeY0LAHXfwLxFFQa9/80nLfd06Re8KqWaRpZTH6WruKuYzJW27qUaRSxGXKWlNlG/TyS4lb1DIzZQqLlPyojN/+8lD1dDw8TmWKi5T9s681KU9h7wCh6mkENwExbkcnnIEhTJw5t88XN4dVoRw1b954E6EnTjXCkfWpfIX4S6jG1wGh2GeeHyrE+IyDu+OXr7WTO4gIiW6/ZtOReAgjgusM3N5N98h2rnb41YK8rXc7bXbMyuWigmss2SFJmFpVq3Xl0j0iK2Rig1mVVxgnYzQfOO7RV0uz65AQJwgP3u8ksLqLJjAOqmLezs9XuUQic23EQtjIWBrlTgOIU847WOtWHCBs2GxvT65g6xqn5Ci07FYmmNYIfup0eJluZGFFjWbRRU4H9W6PTJM4nSShXeQUiHBVi5FaJ74PAkgJF3iPAsu+xVFjAoSVUl7+gNb/my9oHyB+AB7w7oL7kemMQAAAABJRU5ErkJggg==" alt="avatar" class="mx-auto mb-2">
+          <p class="fw-bold text-center mb-6">Monica</p>
 
-          <div class="w-75 mx-auto">
-            <img src="data:image/png;base64,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" alt="avatar" class="mx-auto mb-2">
-            <p class="fw-bold text-center mb-6">Monica</p>
-
-            <div class="d-flex justify-content-center px-5 py-2 mb-4">
-              <div class="text-center fw-bold pe-6 border-end border-dark">
-                <p class="fz-14 text-dune-500 mb-2">總冥想次數</p>
-                <p>202 次</p>
-              </div>
-              <div class="text-center fw-bold ms-6">
-                <p class="fz-14 text-dune-500 mb-2">總冥想時間</p>
-                <p>20 小時 30 分</p>
-              </div>
+          <div class="d-flex justify-content-center px-5 py-2 mb-4">
+            <div class="text-center fw-bold pe-6 border-end border-dark">
+              <p class="fz-14 text-dune-500 mb-2">總冥想次數</p>
+              <p>202 次</p>
             </div>
-
-            <div class="d-flex flex-column gap-4 mb-80">
-              <button type="button"
-                class="btn btn-outline-cta-secondary border-2 fw-bold fs-5 text-start position-relative"
-                style="border-radius: 20px;">
-                <i class="bi bi-gear-fill me-2"></i>
-                帳號設定
-                <i class="bi bi-chevron-right position-absolute top-50 end-0 translate-middle-y me-4"></i>
-              </button>
-              <a href="./login.html" class="btn btn-outline-cta-secondary border-2 fw-bold fs-5 text-start"
-                style="border-radius: 20px;">
-                <i class="bi bi-power me-2"></i>
-                登出
-              </a>
+            <div class="text-center fw-bold ms-6">
+              <p class="fz-14 text-dune-500 mb-2">總冥想時間</p>
+              <p>20 小時 30 分</p>
             </div>
+          </div>
+
+          <div class="d-flex flex-column gap-4 mb-80">
+            <button type="button"
+              class="btn btn-outline-cta-secondary border-2 fw-bold fs-5 text-start position-relative"
+              style="border-radius: 20px;">
+              <i class="bi bi-gear-fill me-2"></i>
+              帳號設定
+              <i class="bi bi-chevron-right position-absolute top-50 end-0 translate-middle-y me-4"></i>
+            </button>
+            <a href="./login.html" class="btn btn-outline-cta-secondary border-2 fw-bold fs-5 text-start"
+              style="border-radius: 20px;">
+              <i class="bi bi-power me-2"></i>
+              登出
+            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,146 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <title>homepage</title>
-    <script type="module" crossorigin src="/AAPD-Team4-Pals/assets/meditate-count-fe068e2c.js"></script>
-    <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/main-b94293ae.js">
-    <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/progressbar.min-0516afac.js">
-    <link rel="stylesheet" href="/AAPD-Team4-Pals/assets/main-8115f5a2.css">
-  </head>
 
-  <body>
-    <header class="bg-mustard-300">
-  <ul class="nav">
-    <li class="nav-item">
-      <a href="./index.html" class="nav-link link-primary-dark">首頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./directly.html" class="nav-link link-primary-dark">選擇使用頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./register.html" class="nav-link link-primary-dark">註冊頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./login.html" class="nav-link link-primary-dark">登入頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./meditate-count.html" class="nav-link link-primary-dark">冥想倒數 / 進行頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./meditate-complete.html" class="nav-link link-primary-dark">冥想完成頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./calendar.html" class="nav-link link-primary-dark">月曆頁 / 統計頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./settings.html" class="nav-link link-primary-dark">設定頁</a>
-    </li>
-  </ul>
-</header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Pals｜朋蓬</title>
+  <script type="module" crossorigin src="/AAPD-Team4-Pals/assets/meditate-count-fe068e2c.js"></script>
+  <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/main-b94293ae.js">
+  <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/progressbar.min-0516afac.js">
+  <link rel="stylesheet" href="/AAPD-Team4-Pals/assets/main-8115f5a2.css">
+</head>
 
-    <section class="meditate-count bg-primary-dark position-relative">
-      <!-- meditate-count 冥想倒數頁 倒數透明遮罩 -->
-      <section
-        class="position-absolute w-100 h-100 z-2 d-flex justify-content-center align-items-center"
-        style="background: rgba(60, 60, 60, 0.8);"
-        id="countdown-overlay"
-      >
-        <h2
-          class="text-white mb-40"
-          id="countdown-number"
-          style="font-size: 128px"
-        >
-          3
-        </h2>
-      </section>
-
-      <!-- meditate-programming 冥想進行頁 -->
-      <div class="container pb-16">
-        <div
-          class="ui-top d-flex align-items-center justify-content-center gap-12 py-10"
-        >
-          <img
-            src="/AAPD-Team4-Pals/assets/Close_48-0c8574b2.svg"
-            alt="close icon"
-            width="48"
-          />
-          <h3 class="fs-5 text-white">正念冥想</h3>
-          <img
-            src="/AAPD-Team4-Pals/assets/voice_48-a460fb54.svg"
-            alt="voice icon"
-            width="48"
-          />
-        </div>
-
-        <h4 class="meditate-instruction fs-5 text-white text-center">
-          深吸氣，吐氣
-        </h4>
-
-        <div
-          class="meditate-progress d-flex justify-content-center py-8 mb-3 position-relative"
-        >
-          <div id="progress-circle" style="width: 288px"></div>
-          <!-- <img src="/assets/images/meditateCount/dolls-meditiating_Y.png"
-            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls_meditiating_Y" /> -->
-          <img
-            src="/AAPD-Team4-Pals/assets/dolls-meditiating_Y-2512680a.svg"
-            class="position-absolute top-50 start-50 translate-middle z-1"
-            alt="dolls_meditiating_Y"
-          />
-          <img
-            src="/AAPD-Team4-Pals/assets/aurora-40059233.png"
-            class="position-absolute top-50 start-50 translate-middle"
-            alt="aurora"
-          />
-        </div>
-
-        <div class="text-text-tertiary text-center">
-          <h4 class="fs-5">您已經冥想了</h4>
-          <time
-            datetime="00:00"
-            class="d-block fs-10 fw-bold mx-6 my-2"
-            id="countDown"
-            style="letter-spacing: 4.8px"
-            >00:00</time
-          >
-        </div>
-
-        <div
-          class="ui-bottom d-flex align-items-center justify-content-center gap-12 py-3"
-        >
-          <button type="button" class="btn p-0">
-            <img
-              src="/AAPD-Team4-Pals/assets/back-441fe051.svg"
-              alt="backward icon"
-            />
-          </button>
-          <button type="button" class="btn p-0">
-            <img
-              src="/AAPD-Team4-Pals/assets/StopButton_80-85204688.svg"
-              id="start-meditation"
-              alt="play icon"
-              width="80"
-            />
-          </button>
-          <button type="button" class="btn p-0">
-            <img
-              src="/AAPD-Team4-Pals/assets/forth-c1aad0aa.svg"
-              alt="forward icon"
-            />
-          </button>
-        </div>
-      </div>
+<body>
+  <section class="meditate-count bg-primary-dark position-relative">
+    <!-- meditate-count 冥想倒數頁 倒數透明遮罩 -->
+    <section class="position-absolute w-100 h-100 z-2 d-flex justify-content-center align-items-center"
+      style="background: rgba(60, 60, 60, 0.8);" id="countdown-overlay">
+      <h2 class="text-white mb-40" id="countdown-number" style="font-size: 128px">
+        3
+      </h2>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-    
-  </body>
+    <!-- meditate-programming 冥想進行頁 -->
+    <div class="container pb-16">
+      <div class="ui-top d-flex align-items-center justify-content-center gap-12 py-10">
+        <img src="/AAPD-Team4-Pals/assets/Close_48-0c8574b2.svg" alt="close icon" width="48" />
+        <h3 class="fs-5 text-white">正念冥想</h3>
+        <img src="/AAPD-Team4-Pals/assets/voice_48-a460fb54.svg" alt="voice icon" width="48" />
+      </div>
+
+      <h4 class="meditate-instruction fs-5 text-white text-center">
+        深吸氣，吐氣
+      </h4>
+
+      <div class="meditate-progress d-flex justify-content-center py-8 mb-3 position-relative">
+        <div id="progress-circle" style="width: 288px"></div>
+        <!-- <img src="/assets/images/meditateCount/dolls-meditiating_Y.png"
+            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls_meditiating_Y" /> -->
+        <img src="/AAPD-Team4-Pals/assets/dolls-meditiating_Y-2512680a.svg"
+          class="position-absolute top-50 start-50 translate-middle z-1" alt="dolls_meditiating_Y" />
+        <img src="/AAPD-Team4-Pals/assets/aurora-40059233.png" class="position-absolute top-50 start-50 translate-middle"
+          alt="aurora" />
+      </div>
+
+      <div class="text-text-tertiary text-center">
+        <h4 class="fs-5">您已經冥想了</h4>
+        <time datetime="00:00" class="d-block fs-10 fw-bold mx-6 my-2" id="countDown"
+          style="letter-spacing: 4.8px">00:00</time>
+      </div>
+
+      <div class="ui-bottom d-flex align-items-center justify-content-center gap-12 py-3">
+        <button type="button" class="btn p-0">
+          <img src="/AAPD-Team4-Pals/assets/back-441fe051.svg" alt="backward icon" />
+        </button>
+        <button type="button" class="btn p-0">
+          <img src="/AAPD-Team4-Pals/assets/StopButton_80-85204688.svg" id="start-meditation" alt="play icon" width="80" />
+        </button>
+        <button type="button" class="btn p-0">
+          <img src="/AAPD-Team4-Pals/assets/forth-c1aad0aa.svg" alt="forward icon" />
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  
+</body>
+
 </html>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <title>homepage</title>
+  <title>Pals｜朋蓬</title>
   <script type="module" crossorigin src="/AAPD-Team4-Pals/assets/cheer-up-3a0843b5.js"></script>
   <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/main-b94293ae.js">
   <link rel="modulepreload" crossorigin href="/AAPD-Team4-Pals/assets/progressbar.min-0516afac.js">
@@ -14,100 +14,71 @@
 </head>
 
 <body>
-  <header class="bg-mustard-300">
-  <ul class="nav">
-    <li class="nav-item">
-      <a href="./index.html" class="nav-link link-primary-dark">首頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./directly.html" class="nav-link link-primary-dark">選擇使用頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./register.html" class="nav-link link-primary-dark">註冊頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./login.html" class="nav-link link-primary-dark">登入頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./meditate-count.html" class="nav-link link-primary-dark">冥想倒數 / 進行頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./meditate-complete.html" class="nav-link link-primary-dark">冥想完成頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./calendar.html" class="nav-link link-primary-dark">月曆頁 / 統計頁</a>
-    </li>
-    <li class="nav-item">
-      <a href="./settings.html" class="nav-link link-primary-dark">設定頁</a>
-    </li>
-  </ul>
-</header>
+  <section
+    class="cheer-up bg-primary-light d-flex flex-column justify-content-center align-items-center position-relative">
+    <section class="position-absolute w-100 h-100 z-2"
+      style="background: rgba(60, 60, 60, 0.9); transition: opacity 1s ease, visibility 0s 1s;">
+    </section>
 
-    <section
-      class="cheer-up bg-primary-light d-flex flex-column justify-content-center align-items-center position-relative">
-      <section class="position-absolute w-100 h-100 z-2"
-        style="background: rgba(60, 60, 60, 0.9); transition: opacity 1s ease, visibility 0s 1s;">
-      </section>
-
-      <div class="modal d-block show position-absolute" id="cheer-up-Modal" tabindex="-1"
-        aria-labelledby="cheer-up-ModalLabel" aria-hidden="false">
-        <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
-          <div class="modal-content bg-primary-light rounded-4">
-            <div class="modal-header d-flex flex-column position-relative pb-6">
-              <h5 class="modal-title position-absolute fs-5 my-1" id="exampleModalLabel">
-                相信你自己！
-              </h5>
-              <a type="button" class="btn-close" href="./calendar.html"></a>
-            </div>
-            <div class="modal-body d-flex flex-column p-6">
-              <img src="/AAPD-Team4-Pals/assets/Mindfulness-Y-33742a4a.svg" alt="" />
-              <h4 class="fs-4 mb-6">
-                每一步都是向前的努力，堅持下去，你會看到成功的果實。
-              </h4>
-            </div>
+    <div class="modal d-block show position-absolute" id="cheer-up-Modal" tabindex="-1"
+      aria-labelledby="cheer-up-ModalLabel" aria-hidden="false">
+      <div class="modal-dialog modal-dialog-centered mx-auto" style="width: 272px">
+        <div class="modal-content bg-primary-light rounded-4">
+          <div class="modal-header d-flex flex-column position-relative pb-6">
+            <h5 class="modal-title position-absolute fs-5 my-1" id="exampleModalLabel">
+              相信你自己！
+            </h5>
+            <a type="button" class="btn-close" href="./calendar.html"></a>
+          </div>
+          <div class="modal-body d-flex flex-column p-6">
+            <img src="/AAPD-Team4-Pals/assets/Mindfulness-Y-33742a4a.svg" alt="" />
+            <h4 class="fs-4 mb-6">
+              每一步都是向前的努力，堅持下去，你會看到成功的果實。
+            </h4>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="container pb-16">
-        <!-- meditate-programming 冥想進行頁 -->
-        <div class="diologue d-flex flex-column align-items-center pt-10">
-          <h3 class="fs-5 bg-white text-black py-5 px-7 rounded-pill">
-            完成了一次很棒的冥想呢！
-          </h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28" fill="none" class="mt-n2">
-            <path
-              d="M19.4641 26C17.9245 28.6667 14.0755 28.6667 12.5359 26L1.27757 6.5C-0.262028 3.83334 1.66247 0.5 4.74167 0.5L27.2583 0.5C30.3375 0.5 32.262 3.83333 30.7224 6.5L19.4641 26Z"
-              fill="white" />
-          </svg>
-        </div>
-
-        <div class="meditate-progress d-flex justify-content-center py-8 mb-6 position-relative">
-          <div id="static-progress-circle" style="width: 288px"></div>
-          <img src="/AAPD-Team4-Pals/assets/VectorLeft-668bdc83.svg" class="position-absolute end-0 top-50 me-4 mt-8"
-            style="transform: scaleX(-1)" alt="VectorLeft" />
-          <!-- <img src="../assets/images/meditateCount/dolls-meditiating_YL_Y.png"
-            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls-meditiating_YL_Y" /> -->
-          <img src="/AAPD-Team4-Pals/assets/dolls-meditiating_Y-2512680a.svg"
-            class="position-absolute top-50 start-50 translate-middle z-1" alt="dolls_meditiating_Y">
-          <img src="/AAPD-Team4-Pals/assets/aurora_yellowlight-ae143be1.png"
-            class="position-absolute top-50 start-50 translate-middle" alt="aurora_yellowlight">
-          <img src="/AAPD-Team4-Pals/assets/VectorLeft-668bdc83.svg" class="position-absolute start-0 top-50 ms-4 mt-8"
-            alt="VectorLeft" />
-        </div>
-
-        <div class="text-center text-text-secondary">
-          <h4 class="fs-5 fw-bold pt-6">您已經冥想了</h4>
-          <time datetime="05:00" class="d-block fs-10 fw-bold mx-6 my-2" id="countdown"
-            style="letter-spacing: 4.8px">05:00</time>
-          <button type="button" class="btn btn-transparent">
-            <img src="/assets/images/meditateCount/PlayButton_80.png" alt="play icon">
-          </button>
-        </div>
+    <div class="container pb-16">
+      <!-- meditate-programming 冥想進行頁 -->
+      <div class="diologue d-flex flex-column align-items-center pt-10">
+        <h3 class="fs-5 bg-white text-black py-5 px-7 rounded-pill">
+          完成了一次很棒的冥想呢！
+        </h3>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" viewBox="0 0 32 28" fill="none" class="mt-n2">
+          <path
+            d="M19.4641 26C17.9245 28.6667 14.0755 28.6667 12.5359 26L1.27757 6.5C-0.262028 3.83334 1.66247 0.5 4.74167 0.5L27.2583 0.5C30.3375 0.5 32.262 3.83333 30.7224 6.5L19.4641 26Z"
+            fill="white" />
+        </svg>
       </div>
-    </section>
 
-    <footer class="bg-white">
+      <div class="meditate-progress d-flex justify-content-center py-8 mb-6 position-relative">
+        <div id="static-progress-circle" style="width: 288px"></div>
+        <img src="/AAPD-Team4-Pals/assets/VectorLeft-668bdc83.svg" class="position-absolute end-0 top-50 me-4 mt-8"
+          style="transform: scaleX(-1)" alt="VectorLeft" />
+        <!-- <img src="../assets/images/meditateCount/dolls-meditiating_YL_Y.png"
+            class="position-absolute top-50 start-50 translate-middle object-fit-none" alt="dolls-meditiating_YL_Y" /> -->
+        <img src="/AAPD-Team4-Pals/assets/dolls-meditiating_Y-2512680a.svg"
+          class="position-absolute top-50 start-50 translate-middle z-1" alt="dolls_meditiating_Y">
+        <img src="/AAPD-Team4-Pals/assets/aurora_yellowlight-ae143be1.png"
+          class="position-absolute top-50 start-50 translate-middle" alt="aurora_yellowlight">
+        <img src="/AAPD-Team4-Pals/assets/VectorLeft-668bdc83.svg" class="position-absolute start-0 top-50 ms-4 mt-8"
+          alt="VectorLeft" />
+      </div>
+
+      <div class="text-center text-text-secondary">
+        <h4 class="fs-5 fw-bold pt-6">您已經冥想了</h4>
+        <time datetime="05:00" class="d-block fs-10 fw-bold mx-6 my-2" id="countdown"
+          style="letter-spacing: 4.8px">05:00</time>
+        <button type="button" class="btn btn-transparent">
+          <img src="/assets/images/meditateCount/PlayButton_80.png" alt="play icon">
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white">
   <div class="d-flex justify-content-center align-items-center">
     <div class="container">
       <div class="d-flex justify-content-between">
@@ -123,9 +94,9 @@
     </div>
   </div>
 </footer>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      
-      
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    
 </body>
 
 </html>
