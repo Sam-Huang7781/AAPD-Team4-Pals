@@ -39,17 +39,21 @@
             </div>
           </div>
         </div>
-        <div class="w-75 px-2 mx-auto mb-40">
-          <button type="button" class="btn btn-outline-cta-secondary fw-bold rounded-4 w-100 fs-5 py-2 mb-6 border-2">
-            <em>5</em> 分鐘
-          </button>
-          <button type="button" class="btn btn-outline-cta-secondary fw-bold rounded-4 w-100 fs-5 py-2 mb-6 border-2">
-            <em>15</em> 分鐘
-          </button>
-          <button type="button" class="btn btn-outline-cta-secondary fw-bold rounded-4 w-100 fs-5 py-2 border-2">
-            <em>30</em> 分鐘
-          </button>
+
+        <div class="w-75 mx-auto mb-40">
+          <div class="btn-group-vertical gap-6 w-100 px-2" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="time-speed" id="5mins" autocomplete="off" checked>
+            <label class="btn btn-outline-cta-secondary fs-5 fw-bold rounded-4 border-2 py-2" for="5mins"><em>5</em>
+              分鐘</label>
+            <input type="radio" class="btn-check" name="time-speed" id="15mins" autocomplete="off">
+            <label class="btn btn-outline-cta-secondary fs-5 fw-bold rounded-4 border-2 py-2" for="15mins"><em>15</em>
+              分鐘</label>
+            <input type="radio" class="btn-check" name="time-speed" id="30mins" autocomplete="off">
+            <label class="btn btn-outline-cta-secondary fs-5 fw-bold rounded-4 border-2 py-2" for="30mins"><em>30</em>
+              分鐘</label>
+          </div>
         </div>
+
         <div class="w-75 mx-auto pt-10 text-center">
           <a href="./exam-type.html" class="btn btn-primary-dark w-100 rounded-4 fs-5 mb-3"
             style="box-shadow: 0px 2px 0px 0px #d9c5a5">
