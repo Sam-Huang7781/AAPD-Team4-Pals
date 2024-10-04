@@ -1,0 +1,33 @@
+#time-slider {
+  .rs-tooltip {
+    top: 115%;
+    font-size: 2.5rem;
+    transform: translateX(-50%);
+    margin: 0 !important;
+
+    &-text {
+      width: 100%;
+      font-weight: bold;
+    }
+  }
+
+  .rs-range-color {
+    background-color: $primary-orange;
+  }
+
+  .rs-path-color {
+    background-color: #fde7d7;
+  }
+
+  .rs-handle-dot {
+    background-color: $primary-orange;
+
+    &:after {
+      background-color: #fde7d7;
+    }
+  }
+
+  .rs-border {
+    border-color: #fde7d7;
+  }
+}
