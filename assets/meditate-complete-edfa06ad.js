@@ -1,1 +1,0 @@
-import"./main-b94293ae.js";import{P as r}from"./progressbar.min-0516afac.js";var t=new r.Circle("#static-progress-circle",{strokeWidth:4,color:"#ffcc00",trailColor:"#eee",trailWidth:4,svgStyle:null,duration:0});t.set(1);
